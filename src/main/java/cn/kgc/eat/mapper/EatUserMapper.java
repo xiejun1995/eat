@@ -1,6 +1,13 @@
 package cn.kgc.eat.mapper;
+/**
+ * 用户相关映射类
+ * @author 谢军军
+ * @Email 18045972801@163.com
+ * @date 2020/2/24 11:10
+ */
 
 import cn.kgc.eat.pojo.EatUser;
+import org.apache.ibatis.annotations.Param;
 
 public interface EatUserMapper {
     /**
@@ -50,4 +57,11 @@ public interface EatUserMapper {
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
     int updateByPrimaryKey(EatUser record);
+
+    /**
+     * 根据用户名查找对应用户
+     * @param userName 用户名
+     * @return
+     */
+    EatUser getEatUserByUserName(@Param("userName") String userName);
 }

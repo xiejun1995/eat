@@ -190,4 +190,13 @@
       USER_ROLE = #{userRole,jdbcType=INTEGER}
     where USER_ID = #{userId,jdbcType=INTEGER}
   </update>
+  <!--根据用户名查找对应用户-->
+  <select id="getEatUserByUserName" resultType="EatUser">
+    select * from eat_user u
+    <trim prefix="where" prefixOverrides="and | or">
+        <if test="userName!=null and userName!='' ">
+          and u.USER_NAME=#{userName}
+        </if>
+    </trim>
+  </select>
 </mapper>
