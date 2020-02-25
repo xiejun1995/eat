@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <!--
         Charisma v1.0.0
@@ -29,6 +29,7 @@
         }
     </style>
     <link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-simplex.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/charisma-app.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
     <link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.css' rel='stylesheet'>
@@ -127,7 +128,7 @@
                     <li><a class="ajax-link" href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> 菜系管理</span></a></li>
                     <li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> 商家管理</span></a></li>
                     <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> 菜品管理</span></a></li>
-                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/horseman/selectHoresmanAll"><i class="icon-font"></i><span class="hidden-tablet"> 骑手管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/horseman/selectHoresmanAll"><i class="icon-font"></i><span id="qishou" class="hidden-tablet"> 骑手管理</span></a></li>
                     <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 订单管理</span></a></li>
                     <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 评论管理</span></a></li>
                 </ul>
@@ -156,6 +157,11 @@
                         <a href="#">Dashboard</a>
                     </li>
                 </ul>
+            </div>
+            <div>
+                <table>
+                    <tr id="horsemanList"></tr>
+                </table>
             </div>
             <div class="sortable row-fluid">
                 <a data-rel="tooltip" title="6 new members." class="well span3 top-block" href="#">
@@ -294,7 +300,27 @@
 <script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 <!-- application script for Charisma demo -->
 <script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
-
+<script>
+    $(function () {
+        $.getJSON("${pageContext.request.contextPath}/horseman/selectHoresmanAll",function (result) {
+            var $url = $("#horsemanList");
+            var td = "";
+            var $url2 = ${"#qishou"}
+            var $result = result.result;
+            $url2.click(function () {
+                $($result).each(function (i) {
+                    var horsemanName = $result[i].horsemanName;
+                    var horsemanPassword = $result[i].horsemanPassword;
+                    var horsemanBornDate = $result[i].horsemanBornDate;
+                    var horsemanPhone = $result[i].horsemanPhone;
+                    var horsemanAddress = $result[i].horsemanAddress;
+                    td += "<td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>";
+                });
+                $url.html(td);
+            })
+        })
+    })
+</script>
 
 </body>
 </html>

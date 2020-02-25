@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.security.PublicKey;
@@ -24,16 +25,26 @@ public class EatHorsemanController{
     @Resource
     private EatHorsemanService EatHorsemanService;
 
+    /**
+     * 后台骑手管理主页
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/toindex")
     public Object toindex() {
         return "back/horseman";
     }
-
+    /**
+     * 后台骑手添加主页
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/toadd")
     public Object toadd() {
         return "back/horseman-add";
     }
-
+    /**
+     * 后台骑手添加功能
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/addHoresman")
     public Object addHoresman(EatHorseman horseman){
         int i = this.EatHorsemanService.insertSelective(horseman);
@@ -45,12 +56,15 @@ public class EatHorsemanController{
         }
     }
 
-
+    /**
+     * 后台骑手根据姓名或电话搜索功能
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping(value = "/selectHoresmanByNameOrPhone",produces = {"application/json;charset=UTF-8"})
-    public Object selectHoresmanByNameOrPhone (@Param("horsemanName")String horsemanName,@Param("horsemanPhone")String horsemanPhone,Model model) {
-        List<EatHorseman> eatHorsemanList = this.EatHorsemanService.selectHoresmanByNameOrPhone(horsemanName,horsemanPhone);
+    public Object selectHoresmanByNameOrPhone (EatHorseman eatHorseman, Model model) {
+        List<EatHorseman> eatHorsemanList = this.EatHorsemanService.selectHoresmanByNameOrPhone(eatHorseman);
         model.addAttribute("eatHorsemanList",eatHorsemanList);
-        return "redirect:selectHoresmanAll";
+        return "back/horseman";
     }
 
 
@@ -62,23 +76,37 @@ public class EatHorsemanController{
 //        return json;
 //    }
 
-    @RequestMapping(value = "/selectHoresmanAll")
-    public Object selectHoresmanAll (Model model) {
-        List<EatHorseman> eatHorsemanList = this.EatHorsemanService.selectHoresmanAll();
-        model.addAttribute("eatHorsemanList",eatHorsemanList);
-        return "back/horseman";
-    }
-
-//    @RequestMapping(value = "/selectHoresmanAll",produces = {"application/json;charset=UTF-8"})
-//    public Object selectHoresmanAll () {
-//        Map<String,Object> map = new HashMap<>();
+    /**
+     * 后台显示骑手信息列表
+     * @姚天祥 set 2020-02-23 08:30
+     */
+//    @RequestMapping(value = "/selectHoresmanAll")
+//    public Object selectHoresmanAll (Model model) {
 //        List<EatHorseman> eatHorsemanList = this.EatHorsemanService.selectHoresmanAll();
-//        map.put("result",eatHorsemanList);
-//        return JSONArray.toJSONString(map);
-        //Object json = JSON.toJSONString(eatHorsemanList);
-        //return json;
+//        model.addAttribute("eatHorsemanList",eatHorsemanList);
+//        return "back/horseman";
 //    }
 
+    /**
+     * 后台显示骑手信息列表
+     * @姚天祥 set 2020-02-23 08:30
+     */
+    @ResponseBody
+    @RequestMapping(value = "/selectHoresmanAll",produces = {"application/json;charset=UTF-8"})
+    public Object selectHoresmanAll () {
+        Object json = null;
+        //Map<String,Object> map = new HashMap<>();
+        List<EatHorseman> eatHorsemanList = this.EatHorsemanService.selectHoresmanAll();
+        //map.put("result",eatHorsemanList);
+        //return JSONArray.toJSONString(map);
+        json = JSON.toJSONString(eatHorsemanList);
+        return json;
+    }
+
+    /**
+     * 后台显示骑手信息列表
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/selectByPrimaryKey")
     public Object selectByPrimaryKey(@Param("horsemanPhone")String horsemanPhone,Model model) {
         EatHorseman eatHorseman = this.EatHorsemanService.selectByPrimaryKey(horsemanPhone);
@@ -86,27 +114,11 @@ public class EatHorsemanController{
         return "back/horseman-update";
     }
 
-    @RequestMapping("/updateByPrimaryKeySelective")
-    public Object updateByPrimaryKeySelective (EatHorseman eatHorseman) {
-        int i = this.EatHorsemanService.updateByPrimaryKeySelective(eatHorseman);
-        if (i>0) {
-            return "redirect:selectHoresmanAll";
-        }else {
-            return "back/horseman-update";
-        }
-    }
 
-    @RequestMapping("/updateByPrimaryKey")
-    public Object updateByPrimaryKey(@Param("horsemanPhone")String horsemanPhone) {
-        int i = this.EatHorsemanService.updateByPrimaryKey(horsemanPhone);
-        System.out.println("-----------controller"+horsemanPhone);
-        if (i>0) {
-            return "redirect:selectHoresmanAll";
-        }else {
-            return "back/horseman-update";
-        }
-    }
-
+    /**
+     * 后台根据电话删除骑手信息
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/deleteByPrimaryKey")
     public Object deleteByPrimaryKey(@Param("horsemanPhone")String horsemanPhone) {
         int i = this.EatHorsemanService.deleteByPrimaryKey(horsemanPhone);
@@ -118,12 +130,16 @@ public class EatHorsemanController{
         }
     }
 
+    /**
+     * 后台根据电话修改骑手信息
+     * @姚天祥 set 2020-02-23 08:30
+     */
     @RequestMapping("/updateByPhone")
-    public Object updateByPhone(String horsemanName) {
-        int i = this.EatHorsemanService.updateByPhone(horsemanName);
+    public Object updateByPhone(EatHorseman eatHorseman) {
+        int i = this.EatHorsemanService.updateByPhone(eatHorseman);
         if (i>0) {
             return "redirect:selectHoresmanAll";
-        }else {
+        } else {
             return "back/horseman-update";
         }
     }

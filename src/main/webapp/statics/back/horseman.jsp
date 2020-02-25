@@ -30,8 +30,8 @@
 </div><!--/span-->
 <!-- left menu ends -->
 <div>
-    <form method="get" action="${pageContext.request.contextPath}/horseman/selectHoresmanByNameOrPhone?horsemanName=horsemanName">
-        <p><input name="horsemanName" type="text"><input id="tijiao" type="submit" value="查询"></p>
+    <form method="post" action="${pageContext.request.contextPath}/horseman/selectHoresmanByNameOrPhone">
+        <p><input name="horsemanName" type="text"><input name="horsemanPhone" type="text"><input id="tijiao" type="submit" value="查询"></p>
     </form>
     <ul id="horsemanList"></ul>
 </div>

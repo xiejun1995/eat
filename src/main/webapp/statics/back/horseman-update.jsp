@@ -12,12 +12,12 @@
 </head>
 <body>
 <div>
-    <form method="post" action="${pageContext.request.contextPath}/horseman/updateByPrimaryKey?horsemanPhone=${eatHorseman.horsemanPhone}">
-        <p>姓名:<input name="horsemanName" type="text" value="${eatHorseman.horsemanName}"/></p>
-        <p>密码:<input name="horsemanPassword" type="password" value="${eatHorseman.horsemanPassword}"/></p>
-        <p>出生日期:<input name="horsemanBornDate" type="date" value="${eatHorseman.horsemanBornDate}"/></p>
-        <p>联系电话:<input name="horsemanPhone" type="text" value="${eatHorseman.horsemanPhone}" readonly /></p>
-        <p>联系地址:<input name="horsemanAddress" type="text" value="${eatHorseman.horsemanAddress}/"></p>
+    <form method="post" action="${pageContext.request.contextPath}/horseman/updateByPhone">
+        <p>姓名:<input name="horsemanName" type="text" value="${eatHorseman.horsemanName}"></p>
+        <p>密码:<input name="horsemanPassword" type="password" value="${eatHorseman.horsemanPassword}"></p>
+        <p>出生日期:<input name="horsemanBornDate" type="date" value="${eatHorseman.horsemanBornDate}"></p>
+        <p>联系电话:<input name="horsemanPhone" type="text" value="${eatHorseman.horsemanPhone}" readonly ></p>
+        <p>联系地址:<input name="horsemanAddress" type="text" value="${eatHorseman.horsemanAddress}"></p>
         <p><input type="submit" value="修改骑手"></p>
     </form>
 </div>
