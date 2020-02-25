@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- changes from the defaults -->
+        <setting name="lazyLoadingEnabled" value="false" />
+    </settings>
+    <typeAliases >
+        <!-- 第一种方式 映射文件中只需要写定义的简称即可-->
+        <!-- <typeAlias type="cn.smbms.pojo.User" alias="user"/> -->
+        <!-- 第二种方式 映射文件中只需要写返回的结果集所对应的实体类类名即可-->
+        <package name="cn.kgc.eat.pojo"/>
+    </typeAliases>
+</configuration>

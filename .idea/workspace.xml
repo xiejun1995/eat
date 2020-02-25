@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="eat:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d99748b7-c66f-4f51-a562-bae16e8db11a" name="Default Changelist" comment="caoyi">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatAddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatCuisineController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatGreensController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatHorsemanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatMerchantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatSecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatShoppingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatStatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/controller/EatUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatAddressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatCommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatCuisineMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatGreensMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatHorsemanMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatMerchantMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatSecurityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatShoppingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatStatusMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/mapper/EatUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatCuisine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatGreens.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatHorseman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatMerchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatShopping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/pojo/EatUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatAddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatCuisineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatGreensService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatHorsemanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatMerchantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatSecurityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatShoppingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatStatusService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/EatUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatAddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatCommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatCuisineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatGreensServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatHorsemanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatMerchantServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatSecurityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatShoppingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatStatusServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/service/impl/EatUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/FreeMarkerTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/fmGeneControllerTemp.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/fmGeneServiceImplTemp.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/fmGeneServiceTemp.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/fmgenedbtemp.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/freemarker.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kgc/eat/utils/temp/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatAddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatCuisineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatGreensMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatHorsemanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatMerchantMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatSecurityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatShoppingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatStatusMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/kgc/eat/mapper/EatUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/back/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/back/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/comment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/do-add-user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/selectUserById.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/test/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/test/test2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/test/test3.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/front/userSelectList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-cerulean.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-classic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-classic.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-cyborg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-journal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-redy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-responsive.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-simplex.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-slate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-spacelab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/bootstrap-united.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/charisma-app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/colorbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/elfinder.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/elfinder.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/fullcalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/fullcalendar.print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/jquery.cleditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/jquery.iphone.toggle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/jquery.noty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/noty_theme_default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/opa-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/uniform.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/css/uploadify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/arrows-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/arrows-normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/bg-input-focus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/bg-input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/buttons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/cancel-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/cancel-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/crop.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/dialogs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/error_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MS5qcGc1344290228.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTAuanBn1344290212.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTEuanBn1344290212.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTIuanBn1344290216.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTMuanBn1344290218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTQuanBn1344290218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTUuanBn1344290220.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTYuanBn1344290222.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTcuanBn1344290224.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTguanBn1344290226.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTkuanBn1344290228.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_Mi5qcGc1344290242.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjAuanBn1344290232.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjEuanBn1344290232.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjIuanBn1344290236.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjMuanBn1344290238.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjQuanBn1344290240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_My5qcGc1344290244.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_NC5qcGc1344290246.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_NS5qcGc1344290246.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_Ni5qcGc1344290248.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_Ny5qcGc1344290252.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_OC5qcGc1344290254.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/.tmb/l1_OS5qcGc1344290254.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/gallery/thumbs/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/glyphicons-halflings-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/glyphicons-halflings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/icons-big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/icons-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/loading_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/logo20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-black16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-black32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-blue16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-blue32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-color16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-color32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-darkgray16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-darkgray32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-gray16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-gray32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-green16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-green32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-orange16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-orange32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-red16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-red32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-white16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/opa-icons-white32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/progress.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/qrcode136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/quicklook-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/quicklook-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/resize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/spinner-mini.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/star-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/star-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/star-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/toolbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/toolbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/img/uploadify-cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-tour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-transition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/bootstrap-typeahead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/charisma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery-ui-1.8.21.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.autogrow-textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.chosen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.cleditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.colorbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.elfinder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.iphone.toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.noty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.raty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.uniform.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/js/jquery.uploadify-3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/BootStrap/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/nouislider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/hotdeal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/product09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/shop01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/shop02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/img/shop03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/jquery.zoom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/nouislider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/js/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/screenshot/Checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/screenshot/Index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/screenshot/Product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/screenshot/Regular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/screenshot/Store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/statics/plugin/Electro/store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatAddressController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatCommentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatCuisineController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatGreensController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatHorsemanController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatMerchantController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatOrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatRoleController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatSecurityController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatShoppingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatStatusController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/controller/EatUserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatAddressMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatAddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatCommentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatCuisineMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatCuisineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatGreensMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatGreensMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatHorsemanMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatHorsemanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatMerchantMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatMerchantMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatOrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatRoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatSecurityMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatSecurityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatShoppingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatShoppingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatStatusMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatStatusMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatUserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/mapper/EatUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatAddress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatComment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatCuisine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatGreens.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatHorseman.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatMerchant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatSecurity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatShopping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/pojo/EatUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatAddressService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatCommentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatCuisineService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatGreensService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatHorsemanService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatMerchantService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatOrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatRoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatSecurityService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatShoppingService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatStatusService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/EatUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatAddressServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatCommentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatCuisineServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatGreensServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatHorsemanServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatMerchantServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatOrderServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatRoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatSecurityServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatShoppingServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatStatusServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/service/impl/EatUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/utils/temp/FreeMarkerTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/kgc/eat/utils/temp/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jdbc/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatAddressController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatCommentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatCuisineController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatGreensController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatHorsemanController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatMerchantController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatOrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatRoleController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatSecurityController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatShoppingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatStatusController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/controller/EatUserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatAddressMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatAddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatCommentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatCuisineMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatCuisineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatGreensMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatGreensMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatHorsemanMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatHorsemanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatMerchantMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatMerchantMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatOrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatRoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatSecurityMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatSecurityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatShoppingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatShoppingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatStatusMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatStatusMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatUserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/mapper/EatUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatAddress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatComment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatCuisine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatGreens.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatHorseman.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatMerchant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatSecurity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatShopping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/pojo/EatUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatAddressService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatCommentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatCuisineService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatGreensService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatHorsemanService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatMerchantService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatOrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatRoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatSecurityService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatShoppingService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatStatusService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/EatUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatAddressServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatCommentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatCuisineServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatGreensServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatHorsemanServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatMerchantServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatOrderServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatRoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatSecurityServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatShoppingServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatStatusServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/service/impl/EatUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/utils/temp/FreeMarkerTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/cn/kgc/eat/utils/temp/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/jdbc/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/log4j/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/log4j/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/spring/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/HikariCP-java7-2.4.13.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/alipay-sdk-java-4.9.5.ALL.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/aspectjweaver-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/bcprov-jdk15on-1.62.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/c3p0-0.9.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/commons-io-2.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/commons-lang3-3.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/druid-1.0.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/fastjson-1.2.59.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/freemarker-2.3.29.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/log4j-1.2-api-2.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/log4j-api-2.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/log4j-core-2.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/log4j-web-2.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/mchange-commons-java-0.2.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/mybatis-3.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/mybatis-spring-2.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/org.apache.servicemix.bundles.aopalliance-1.0-1.0.0-rc1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/quartz-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/quartz-jobs-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/slf4j-api-1.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/slf4j-log4j12-1.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-aop-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-beans-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-context-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-core-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-expression-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-jcl-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-jdbc-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-test-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-tx-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-web-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/lib/spring-webmvc-5.2.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/back/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/back/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/comment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/do-add-user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/selectUserById.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/test/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/test/test2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/test/test3.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/front/userSelectList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-cerulean.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-classic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-classic.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-cyborg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-journal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-redy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-responsive.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-simplex.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-slate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-spacelab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/bootstrap-united.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/charisma-app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/colorbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/elfinder.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/elfinder.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/fullcalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/fullcalendar.print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/jquery.cleditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/jquery.iphone.toggle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/jquery.noty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/noty_theme_default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/opa-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/uniform.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/css/uploadify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ajax-loaders/ajax-loader-8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/arrows-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/arrows-normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/bg-input-focus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/bg-input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/buttons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/cancel-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/cancel-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/crop.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/dialogs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/error_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MS5qcGc1344290228.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTAuanBn1344290212.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTEuanBn1344290212.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTIuanBn1344290216.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTMuanBn1344290218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTQuanBn1344290218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTUuanBn1344290220.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTYuanBn1344290222.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTcuanBn1344290224.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTguanBn1344290226.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MTkuanBn1344290228.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_Mi5qcGc1344290242.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjAuanBn1344290232.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjEuanBn1344290232.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjIuanBn1344290236.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjMuanBn1344290238.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_MjQuanBn1344290240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_My5qcGc1344290244.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_NC5qcGc1344290246.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_NS5qcGc1344290246.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_Ni5qcGc1344290248.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_Ny5qcGc1344290252.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_OC5qcGc1344290254.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/.tmb/l1_OS5qcGc1344290254.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/gallery/thumbs/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/glyphicons-halflings-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/glyphicons-halflings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/icons-big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/icons-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/iphone-style-checkboxes/slider_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/loading_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/logo20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-black16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-black32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-blue16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-blue32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-color16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-color32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-darkgray16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-darkgray32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-gray16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-gray32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-green16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-green32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-orange16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-orange32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-red16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-red32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-white16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/opa-icons-white32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/progress.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/qrcode136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/quicklook-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/quicklook-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/resize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/spinner-mini.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/star-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/star-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/star-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/toolbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/toolbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/img/uploadify-cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-tour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-transition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/bootstrap-typeahead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/charisma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery-ui-1.8.21.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.autogrow-textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.chosen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.cleditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.colorbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.elfinder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.iphone.toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.noty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.raty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.uniform.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/js/jquery.uploadify-3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/BootStrap/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/nouislider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/hotdeal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/product09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/shop01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/shop02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/img/shop03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/jquery.zoom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/nouislider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/js/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/screenshot/Checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/screenshot/Index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/screenshot/Product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/screenshot/Regular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/screenshot/Store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/eat/statics/plugin/Electro/store.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YACGwFx4QZYK2IYLUWQZeGbBRy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\front\test" />
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\plugin\BootStrap" />
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\front" />
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\back" />
+      <recent name="E:\框架练习\SSM\eat\src\main\webapp\statics\plugin\Electro" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.51">
+    <configuration name="Tomcat 8.5.51" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="eat:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_eat" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50453" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="eat:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="tomcat-9.0.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="tomcat-9.0.29" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="eat:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_eat_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52090" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="eat:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 8.5.51" />
+      <item itemvalue="Tomcat Server.tomcat-9.0.29" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.057187017" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d99748b7-c66f-4f51-a562-bae16e8db11a" name="Default Changelist" comment="" />
+      <created>1582375919730</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582375919730</updated>
+      <workItem from="1582375921054" duration="9772000" />
+      <workItem from="1582417864354" duration="6932000" />
+      <workItem from="1582424839478" duration="29567000" />
+      <workItem from="1582458080515" duration="1218000" />
+      <workItem from="1582459314949" duration="3367000" />
+      <workItem from="1582468348058" duration="1479000" />
+      <workItem from="1582469846756" duration="2706000" />
+      <workItem from="1582504444764" duration="12100000" />
+      <workItem from="1582519763482" duration="30447000" />
+      <workItem from="1582590971885" duration="4962000" />
+      <workItem from="1582596388977" duration="393000" />
+      <workItem from="1582596832296" duration="1897000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="caoyi" />
+    <option name="LAST_COMMIT_MESSAGE" value="caoyi" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Template_Data_Languages" timestamp="1582540270804">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Template_Data_Languages/0.0.1366.728@0.0.1366.728" timestamp="1582540270804" />
+    <state x="364" y="0" width="652" height="728" key="#Tomcat_8.5.51" timestamp="1582504468949">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="364" y="0" width="652" height="728" key="#Tomcat_8.5.51/0.0.1366.728@0.0.1366.728" timestamp="1582504468949" />
+    <state x="282" y="22" key="#Tomcat_Server" timestamp="1582504466751">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="282" y="22" key="#Tomcat_Server/0.0.1366.728@0.0.1366.728" timestamp="1582504466751" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582469989910">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582469989910" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1582551974810">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582551974810" />
+    <state x="275" y="22" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1582469986799">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1582469986799" />
+    <state x="236" y="0" key="CommitChangelistDialog2" timestamp="1582598699824">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="236" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582598699824" />
+    <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1582597856575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582597856575" />
+    <state x="504" y="260" width="382" height="208" key="Github.CreateGistDialog" timestamp="1582597479888">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="504" y="260" width="382" height="208" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1582597479888" />
+    <state x="562" y="146" width="331" height="253" key="Github.ShareDialog" timestamp="1582597683818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="562" y="146" width="331" height="253" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1582597683818" />
+    <state width="1219" height="230" key="GridCell.Tab.0.bottom" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.0.center" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.0.left" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.0.right" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.1.bottom" timestamp="1582596176988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582596176988" />
+    <state width="1219" height="230" key="GridCell.Tab.1.center" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.1.left" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.1.right" timestamp="1582596176987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582596176987" />
+    <state width="1219" height="230" key="GridCell.Tab.2.bottom" timestamp="1582596176988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582596176988" />
+    <state width="1219" height="230" key="GridCell.Tab.2.center" timestamp="1582596176988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1582596176988" />
+    <state width="1219" height="230" key="GridCell.Tab.2.left" timestamp="1582596176988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1582596176988" />
+    <state width="1219" height="230" key="GridCell.Tab.2.right" timestamp="1582596176988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="230" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1582596176988" />
+    <state width="1219" height="280" key="GridCell.Tab.3.bottom" timestamp="1582470676883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="280" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582470676883" />
+    <state width="1219" height="280" key="GridCell.Tab.3.center" timestamp="1582470676883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="280" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1582470676883" />
+    <state width="1219" height="280" key="GridCell.Tab.3.left" timestamp="1582470676883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="280" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1582470676883" />
+    <state width="1219" height="280" key="GridCell.Tab.3.right" timestamp="1582470676883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1219" height="280" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1582470676883" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1582597195746">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582597195746" />
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582598392609">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582598392609" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1582507624745">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582507624745" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582507824317">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582507824317" />
+  </component>
+</project>
