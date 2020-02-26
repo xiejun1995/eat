@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * 用户相关处理器类
@@ -46,20 +48,33 @@ public class EatUserController{
      * @return
      */
     @RequestMapping("/front/doLogin")
-    public String frontDoLogin(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session, HttpServletRequest request){
-        EatUser eatUser=eatUserService.getEatUserByUserName(username);
-        if(eatUser!=null){
-            if(eatUser.getUserPassword().equals(password)){
-                session.setAttribute("eatUser",eatUser);
-                return "front/index";
+    public String frontDoLogin(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session, HttpServletRequest request) throws ParseException {
+        if(username!="" && password!=""){
+            EatUser eatUser=new EatUser();
+            eatUser.setUserName("张三");
+            eatUser.setUserPassword("123456");
+            eatUser.setUserBornDate(new SimpleDateFormat("yyyy-MM-dd").parse("2020-02-22"));
+            eatUser.setUserAddress("兰州安宁");
+            eatUser.setUserAddressId(1);
+            eatUser.setUserPhone("17777777777");
+            eatUser.setUserRole(1);
+            if(eatUser.getUserName().equals(username)){
+                if(eatUser.getUserPassword().equals(password)){
+                    session.setAttribute("eatUser",eatUser);
+                    return "front/index";
+                }else{
+                    request.setAttribute("msg", Constant.USER_PWD_ERROR);
+                    return "front/login";
+                }
             }else{
-                request.setAttribute("msg", Constant.USER_PWD_ERROR);
+                request.setAttribute("msg", Constant.USER_NAME_ERROR);
                 return "front/login";
             }
         }else{
-            request.setAttribute("msg",Constant.USER_NAME_ERROR);
+            request.setAttribute("msg", Constant.USER_NAME_EMPTY);
             return "front/login";
         }
+
     }
     /**
      * 后台登录页面

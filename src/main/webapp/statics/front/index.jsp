@@ -131,17 +131,6 @@
                                         </div>
                                         <button class="delete"><i class="fa fa-close"></i></button>
                                     </div>
-
-                                    <div class="product-widget">
-                                        <div class="product-img">
-                                            <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product02.png" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-                                        </div>
-                                        <button class="delete"><i class="fa fa-close"></i></button>
-                                    </div>
                                 </div>
                                 <div class="cart-summary">
                                     <small>3 Item(s) selected</small>
@@ -1111,10 +1100,17 @@
 <script src="${pageContext.request.contextPath}/statics/plugin/Electro/js/jquery.zoom.min.js"></script>
 <script src="${pageContext.request.contextPath}/statics/plugin/Electro/js/main.js"></script>
 <script type="text/javascript">
+    //判断用户是否已登录成功
     if(${sessionScope.eatUser!=null}){
-        $("#user").removeChild(a);
-        $("#user").append("<span>欢迎您！${sessionScope.eatUser.userName}</span>");
+        //如果登录成功，则移除登录、注册字样并显示用户名
+        $("#user").find("a").remove();
+        $("#user").append("<span style='color:white' >欢迎您！${sessionScope.eatUser.userName}</span>");
     }
+    //给商品添加至购物车增加点击事件完成购物车增加商品
+    var $addCartBtn=$(".add-to-cart-btn");
+    $addCartBtn.click(function () {
+
+    });
 </script>
 </body>
 </html>

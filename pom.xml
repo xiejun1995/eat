@@ -43,12 +43,18 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <!--jar包管理-->
   <!--引入依赖-->
   <dependencies>
-
+    <!--httpclient-->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.3</version>
+    </dependency>
     <!-- spring -->
     <dependency>
       <groupId>org.aspectj</groupId>
@@ -238,6 +244,18 @@
     </dependency>
   </dependencies>
 
+  <licenses>
+    <license>
+      <name>The BSD 3-Clause License</name>
+      <url>https://opensource.org/licenses/BSD-3-Clause</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url></url>
+    <connection></connection>
+    <developerConnection></developerConnection>
+  </scm>
   <build>
     <finalName>eat</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

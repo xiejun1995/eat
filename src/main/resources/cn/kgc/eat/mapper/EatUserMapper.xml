@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.kgc.eat.mapper.EatUserMapper" >
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kgc.eat.mapper.EatUserMapper">
   <resultMap id="BaseResultMap" type="cn.kgc.eat.pojo.EatUser" >
     <!--
       WARNING - @mbggenerated
@@ -192,11 +194,6 @@
   </update>
   <!--根据用户名查找对应用户-->
   <select id="getEatUserByUserName" resultType="EatUser">
-    select * from eat_user u
-    <trim prefix="where" prefixOverrides="and | or">
-        <if test="userName!=null and userName!='' ">
-          and u.USER_NAME=#{userName}
-        </if>
-    </trim>
+        select * from eat_user u where u.USER_NAME = #{userName,jdbcType=VARCHAR}
   </select>
 </mapper>
