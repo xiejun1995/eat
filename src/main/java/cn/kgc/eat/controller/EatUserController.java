@@ -1,8 +1,6 @@
 package cn.kgc.eat.controller;
 import cn.kgc.eat.pojo.EatUser;
 import cn.kgc.eat.service.EatUserService;
-import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -56,8 +54,8 @@ public class EatUserController{
      */
     @RequestMapping(value = "/getUserList")
     public ModelAndView getUserList(){
-        ModelAndView modelAndView = new ModelAndView();
         List<EatUser> userList =  EatUserService.getUserList();
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userList",userList);
         modelAndView.setViewName("back/select-user");
         return modelAndView;

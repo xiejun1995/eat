@@ -13,6 +13,10 @@
     <result column="GREENS_ADDRESS" property="greensAddress" jdbcType="VARCHAR" />
     <result column="GREENS_GRADE_ID" property="greensGradeId" jdbcType="BIGINT" />
     <result column="GREENS_TYPE_ID" property="greensTypeId" jdbcType="BIGINT" />
+    <!--菜品表和菜系表连接查询，需要得到菜品所属菜系名称-->
+    <result column="CUISINE_NAME" property="cuisineName" jdbcType="VARCHAR"/>
+    <result column="GREENS_PIC" property="greensPic" jdbcType="VARCHAR"/>
+    <result column="GREENS_DETAILS" property="greensDetails" jdbcType="VARCHAR"/>
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -143,4 +147,27 @@
       GREENS_TYPE_ID = #{greensTypeId,jdbcType=BIGINT}
     where GREENS_ID = #{greensId,jdbcType=BIGINT}
   </update>
+
+  <!--根据菜品名称，价格，区域，分类查询菜品信息-->
+  <select id="getGreensList" resultMap="BaseResultMap" parameterType="cn.kgc.eat.pojo.EatGreens">
+    SELECT g.*,c.CUISINE_NAME FROM eat_greens AS g ,eat_cuisine AS c
+    WHERE 1=1
+    <choose>
+      <when test="GREENS_NAME!=null and GREENS_NAME!=''">
+        AND GREENS_NAME LIKE CONCAT ('%',#{GREENS_NAME},'%')
+      </when>
+      <when test="GREENS_PRICE!=null and GREENS_PRICE!=''">
+        AND GREENS_PRICE LIKE CONCAT ('%',#{GREENS_PRICE},'%')
+      </when>
+      <when test="CUISINE_NAME!=null and CUISINE_NAME!=''">
+        AND CUISINE_NAME LIKE CONCAT('%',#{CUISINE_NAME},'%')
+      </when>
+      <when test="GREENS_ADDRESS!=null and GREENS_ADDRESS!=''">
+        AND GREENS_ADDRESS LIKE CONCAT ('%',#{GREENS_ADDRESS},'%')
+      </when>
+      <otherwise>
+        AND g.GREENS_TYPE_ID = c.CUISINE_ID
+      </otherwise>
+    </choose>
+  </select>
 </mapper>

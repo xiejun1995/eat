@@ -18,7 +18,7 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link id="bs-css" href="../plugin/BootStrap/css/bootstrap-cerulean.css" rel="stylesheet">
+	<link id="bs-css" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
@@ -27,22 +27,22 @@
 		padding: 9px 0;
 	  }
 	</style>
-	<link href="../plugin/BootStrap/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="../plugin/BootStrap/css/charisma-app.css" rel="stylesheet">
-	<link href="../plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='../plugin/BootStrap/css/fullcalendar.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='../plugin/BootStrap/css/chosen.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/uniform.default.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/colorbox.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/jquery.noty.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/noty_theme_default.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/elfinder.min.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/elfinder.theme.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/opa-icons.css' rel='stylesheet'>
-	<link href='../plugin/BootStrap/css/uploadify.css' rel='stylesheet'>
+	<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/charisma-app.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/chosen.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/uniform.default.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/colorbox.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery.noty.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/noty_theme_default.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/elfinder.min.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/elfinder.theme.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/opa-icons.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/uploadify.css' rel='stylesheet'>
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -50,7 +50,7 @@
 	<![endif]-->
 
 	<!-- The fav icon -->
-	<link rel="shortcut icon" href="../plugin/BootStrap/img/favicon.ico">
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/img/favicon.ico">
 		
 </head>
 
