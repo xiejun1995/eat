@@ -1,5 +1,6 @@
 package cn.kgc.eat.service;
 
+import cn.kgc.eat.pojo.EatMerchant;
 import cn.kgc.eat.pojo.EatUser;
 import org.apache.ibatis.annotations.Param;
 
@@ -43,15 +44,9 @@ public interface EatUserService {
 
     /**
      * 根据商家地址查询
-     * @param address
+     * @param text
      * @return
      */
-    List<EatUser> selectByAddress(String address);
+    List<EatMerchant> selectByAddressOrGreensName(@Param("text") String text);
 
-    /**
-     * 根据菜品名称查询
-     * @param greensName
-     * @return
-     */
-    List<EatUser> selectByGreens(String greensName);
 }

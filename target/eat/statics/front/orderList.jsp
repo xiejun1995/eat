@@ -1,4 +1,7 @@
+<%@ page import="java.util.List" %>
+<%@ page import="cn.kgc.eat.pojo.EatOrder" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +10,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+		<%
+			List<EatOrder> list=(List<EatOrder>) request.getAttribute("orderList");
+			String name=null;
+			if (list!=null){
+				for (EatOrder order:list) {
+				  name=order.getOrderPeople();
+				  break;
+				}
+			}
+		%>
 		<title>Electro - HTML Ecommerce Template</title>
 		<style type="text/css">
 			#region{
@@ -205,7 +217,14 @@
 			<!-- /container -->
 		</div>
 		<!-- /BREADCRUMB -->
+			<div>
+				<form action="/order/selectByAll" method="get">
+						 <input type="hidden" name="name" value="<%=name%>"/>
+					<input type="search" name="text"/>
+					<input type="submit" value="搜索"/>
 
+				</form>
+			</div>
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -228,14 +247,40 @@
 					<th>配送时间</th>
 					<th>订单状态</th>
 					<th>商家名称</th>
+					<td>操作</td>
 				</tr>
-				<c:forEach items="${list}" var="order">
+				<%--查询我的订单--%>
+				<c:if test="${orderList != null}">
+				<c:forEach items="${orderList}" var="order">
 					<tr>
-						<td>${order}</td>
-						<td>${order}</td>
-						<td>${order}</td>
+						<td>${order.orderId}</td>
+						<td>${order.orderPeople}</td>
+						<td>${order.orderPhone}</td>
+						<td><fmt:formatDate value="${order.orderTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+						<td><fmt:formatDate value="${order.orderDeliveryTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+						<td>${order.statusName}</td>
+						<td>${order.orderMerchantName}</td>
+						<td><a href="/order/delete?id=${order.orderId}">删除</a></td>
 					</tr>
 				</c:forEach>
+				</c:if>
+
+				<%--根据所有条件查询订单--%>
+				<c:if test="${orderListByAll != null}">
+					<c:forEach items="${orderListByAll}" var="order">
+						<tr>
+							<td>${order.orderId}</td>
+							<td>${order.orderPeople}</td>
+							<td>${order.orderPhone}</td>
+							<td><fmt:formatDate value="${order.orderTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+							<td><fmt:formatDate value="${order.orderDeliveryTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+							<td>${order.statusName}</td>
+							<td>${order.orderMerchantName}</td>
+							<td><a href="/order/delete?id=${order.orderId}">删除</a></td>
+						</tr>
+					</c:forEach>
+				</c:if>
+
 			</table>
 		</div>
 

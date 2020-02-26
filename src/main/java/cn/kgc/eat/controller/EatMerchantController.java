@@ -16,4 +16,5 @@ public class EatMerchantController{
     @Resource
     private EatMerchantService EatMerchantService;
 
+
 }

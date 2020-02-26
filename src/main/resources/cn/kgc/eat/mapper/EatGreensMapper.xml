@@ -13,7 +13,9 @@
     <result column="GREENS_ADDRESS" property="greensAddress" jdbcType="VARCHAR" />
     <result column="GREENS_GRADE_ID" property="greensGradeId" jdbcType="BIGINT" />
     <result column="GREENS_TYPE_ID" property="greensTypeId" jdbcType="BIGINT" />
-    <result column="GREENS_USER_ID" property="greensUserId"/>
+    <result column="MERCHANT_SECURITY_ID" property="greensSecurityId"/>
+    <result column="GREENS_PIC" property="greensPic" />
+    <result column="GREENS_DETAILS" property="greensDetails" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--

@@ -14,6 +14,9 @@
     <result column="ORDER_DELIVERY_TIME" property="orderDeliveryTime" jdbcType="TIMESTAMP" />
     <result column="ORDER_STATUS_ID" property="orderStatusId" jdbcType="BIGINT" />
     <result column="ORDER_NUMBER" property="orderNumber" jdbcType="BIGINT" />
+    <result column="ORDER_MERCHANT_ID" property="orderMerchantName"/>
+    <result column="STATUS_NAME" property="statusName"/>
+    <result column="MERCHANT_NAME" property="orderMerchantName"/>
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -155,4 +158,44 @@
       ORDER_NUMBER = #{orderNumber,jdbcType=BIGINT}
     where ORDER_ID = #{orderId,jdbcType=VARCHAR}
   </update>
+
+  <select id="MyOrderList" resultMap="BaseResultMap">
+  SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,`ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+AND ORDER_PEOPLE=#{name}
+  </select>
+
+  <delete id="deleteOrderById">
+    delete from eat_order where ORDER_ID=#{id}
+  </delete>
+
+  <select id="selectOrderById" resultType="string">
+    select ORDER_PEOPLE from eat_order where ORDER_ID=#{id}
+  </select>
+
+  <select id="orderList" resultMap="BaseResultMap">
+      SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,`ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+  </select>
+
+  <delete id="deleteOrder">
+        delete from eat_order  where ORDER_ID=#{id}
+  </delete>
+
+
+  <select id="orderListByAll" resultMap="BaseResultMap">
+    SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,
+    `ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+AND (ORDER_ID=#{text}  OR ORDER_PEOPLE=#{text} OR ORDER_PHONE=#{text}
+OR ORDER_TIME LIKE CONCAT('%',#{text},'%')
+OR ORDER_DELIVERY_TIME LIKE CONCAT('%',#{text},'%') OR s.STATUS_NAME=#{text}
+OR m.MERCHANT_NAME LIKE CONCAT('%',#{text},'%'))
+  </select>
+
+
+
 </mapper>

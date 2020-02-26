@@ -52,16 +52,46 @@ public class EatGreens {
     private Long greensTypeId;
 
     /**
-     * 用户id
+     * 商家id
      */
-    private  Integer greensUserId;
+    private  Integer greensSecurityId;
+    /**
+     *菜品图片路径
+     */
+    private String greensPic;
 
-    public Integer getGreensUserId() {
-        return greensUserId;
+    /**
+     * 菜品详情
+     */
+    private String greensDetails;
+
+
+
+
+
+    public String getGreensDetails() {
+        return greensDetails;
     }
 
-    public void setGreensUserId(Integer greensUserId) {
-        this.greensUserId = greensUserId;
+    public void setGreensDetails(String greensDetails) {
+        this.greensDetails = greensDetails;
+    }
+
+
+    public String getGreensPic() {
+        return greensPic;
+    }
+
+    public void setGreensPic(String greensPic) {
+        this.greensPic = greensPic;
+    }
+
+    public Integer getGreensSecurityId() {
+        return greensSecurityId;
+    }
+
+    public void setGreensSecurityId(Integer greensSecurityId) {
+        this.greensSecurityId = greensSecurityId;
     }
 
     /**

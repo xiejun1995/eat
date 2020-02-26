@@ -215,19 +215,29 @@
     `USER_GENDER`=#{userGender},`USER_ROLE`=#{userRole} WHERE USER_ID=#{userId}
   </update>
 
+
+
+
+  <resultMap id="merchantResultMap" type="EatMerchant">
+    <id column="MERCHANT_ID" property="merchantId" jdbcType="INTEGER" />
+    <result column="MERCHANT_PHONE" property="merchantPhone" jdbcType="VARCHAR" />
+    <result column="MERCHANT_ADDRESS" property="merchantAddress" jdbcType="VARCHAR" />
+    <result column="MERCHANT_PRICE"  property="merchantprice"/>
+    <result column="MERCHANT_STATUS" property="merchantStatus" jdbcType="VARCHAR" />
+    <result column="MERCHANT_EMAIL" property="merchantEmail" jdbcType="VARCHAR" />
+    <result column="MERCHANT_NAME" property="merchantName" jdbcType="VARCHAR" />
+    <result column="MERCHANT_SECURITY_ID" property="merchantSecurityId" jdbcType="INTEGER" />
+  </resultMap>
   
-  <!--根据商家地址查询-->
-  <select id="selectByAddress" resultMap="BaseResultMap">
-      SELECT * FROM `eat_user`
-      WHERE USER_ADDRESS LIKE CONCAT ('%',#{address},'%') AND USER_ROLE=2
+  <!--根据商家地址/菜品名称查询-->
+  <select id="selectByAddressOrGreensName" resultMap="merchantResultMap">
+       SELECT m.* FROM eat_merchant AS m,eat_greens AS g
+       WHERE ( g.GREENS_NAME LIKE CONCAT('%',#{text},'%') OR
+       m.MERCHANT_ADDRESS LIKE CONCAT ('%',#{text},'%'))
+       AND g.GREENS_MERCHANT_ID=m.MERCHANT_ID
   </select>
 
-  <!--根据菜品名称查询-->
-  <select id="selectByGreens" resultMap="BaseResultMap">
-         SELECT u.* FROM eat_user AS u,eat_greens AS g
-         WHERE u.USER_ID=g.GREENS_USER_ID
-         AND g.GREENS_NAME LIKE CONCAT('%',#{greensName},'%')
-  </select>
+
 
   
 

@@ -32,7 +32,7 @@
 	<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/charisma-app.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
 	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.css' rel='stylesheet'>
-	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.print.css' rel='stylesheet' media='print'>
+	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
 	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/chosen.css' rel='stylesheet'>
 	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/uniform.default.css' rel='stylesheet'>
 	<link href='${pageContext.request.contextPath}/statics/plugin/BootStrap/css/colorbox.css' rel='stylesheet'>
@@ -47,7 +47,7 @@
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
-	  <script src="${pageContext.request.contextPath}/http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<!-- The fav icon -->
@@ -56,45 +56,176 @@
 </head>
 
 <body>
+		<!-- topbar starts -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="test.jsp"> CRM</a>
+				
+				<!-- theme selector starts -->
+				<div class="btn-group pull-right theme-container" >
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-tint"></i><span class="hidden-phone"> Change Theme / Skin</span>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" id="themes">
+						<li><a data-value="classic" href="#"><i class="icon-blank"></i> Classic</a></li>
+						<li><a data-value="cerulean" href="#"><i class="icon-blank"></i> Cerulean</a></li>
+						<li><a data-value="cyborg" href="#"><i class="icon-blank"></i> Cyborg</a></li>
+						<li><a data-value="redy" href="#"><i class="icon-blank"></i> Redy</a></li>
+						<li><a data-value="journal" href="#"><i class="icon-blank"></i> Journal</a></li>
+						<li><a data-value="simplex" href="#"><i class="icon-blank"></i> Simplex</a></li>
+						<li><a data-value="slate" href="#"><i class="icon-blank"></i> Slate</a></li>
+						<li><a data-value="spacelab" href="#"><i class="icon-blank"></i> Spacelab</a></li>
+						<li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
+					</ul>
+				</div>
+				<!-- theme selector ends -->
+				
+				<!-- user dropdown starts -->
+				<div class="btn-group pull-right" >
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i><span class="hidden-phone"> admin</span>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="${pageContext.request.contextPath}/statics/plugin/BootStrap/login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- user dropdown ends -->
+				
+				<div class="top-nav nav-collapse">
+					<ul class="nav">
+						<li><a href="#">Visit Site</a></li>
+						<li>
+							<form class="navbar-search pull-left">
+								<input placeholder="Search" class="search-query span2" name="query" type="text">
+							</form>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<!-- topbar ends -->
 		<div class="container-fluid">
 		<div class="row-fluid">
-		
-			<div class="row-fluid">
-				<div class="span12 center login-header">
-					<h2>Welcome to Charisma</h2>
-				</div><!--/span-->
-			</div><!--/row-->
+				
+			<!-- left menu starts -->
+			<div class="span2 main-menu-span">
+				<div class="well nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li class="nav-header hidden-tablet">Main</li>
+						<li><a class="ajax-link" href="test.jsp"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a class="ajax-link" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
+						<li><a class="ajax-link" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
+						<li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
+						<li><a class="ajax-link" href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
+						<li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
+						<li class="nav-header hidden-tablet">Sample Section</li>
+						<li><a class="ajax-link" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
+						<li><a class="ajax-link" href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
+						<li><a class="ajax-link" href="grid.html"><i class="icon-th"></i><span class="hidden-tablet"> Grid</span></a></li>
+						<li><a class="ajax-link" href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
+						<li><a href="tour.html"><i class="icon-globe"></i><span class="hidden-tablet"> Tour</span></a></li>
+						<li><a class="ajax-link" href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/statics/plugin/BootStrap/error.html"><i class="icon-ban-circle"></i><span class="hidden-tablet"> Error Page</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/statics/plugin/BootStrap/login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
+					</ul>
+					<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
+				</div><!--/.well -->
+			</div><!--/span-->
+			<!-- left menu ends -->
 			
-			<div class="row-fluid">
-				<div class="well span5 center login-box">
-					<div class="alert alert-info">
-						Please login with your Username and Password.
-					</div>
-					<form class="form-horizontal" action="${pageContext.request.contextPath}/statics/plugin/BootStrap/index.html" method="post">
-						<fieldset>
-							<div class="input-prepend" title="Username" data-rel="tooltip">
-								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="username" id="username" type="text" value="admin" />
-							</div>
-							<div class="clearfix"></div>
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<div id="content" class="span10">
+			<!-- content starts -->
+			
 
-							<div class="input-prepend" title="Password" data-rel="tooltip">
-								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="admin123456" />
-							</div>
-							<div class="clearfix"></div>
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="#">Dashboard</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sortable row-fluid">
+				<a data-rel="tooltip" title="6 new members." class="well span3 top-block" href="#">
+					<span class="icon32 icon-red icon-user"></span>
+					<div>Total Members</div>
+					<div>507</div>
+					<span class="notification">6</span>
+				</a>
 
-							<div class="input-prepend">
-							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
-							</div>
-							<div class="clearfix"></div>
+				<a data-rel="tooltip" title="4 new pro members." class="well span3 top-block" href="#">
+					<span class="icon32 icon-color icon-star-on"></span>
+					<div>Pro Members</div>
+					<div>228</div>
+					<span class="notification green">4</span>
+				</a>
 
-							<p class="center span5">
-							<button type="submit" class="btn btn-primary">Login</button>
-							</p>
-						</fieldset>
-					</form>
-				</div><!--/span-->
-			</div><!--/row-->
+				<a data-rel="tooltip" title="$34 new sales." class="well span3 top-block" href="#">
+					<span class="icon32 icon-color icon-cart"></span>
+					<div>Sales</div>
+					<div>$13320</div>
+					<span class="notification yellow">$34</span>
+				</a>
+				
+				<a data-rel="tooltip" title="12 new messages." class="well span3 top-block" href="#">
+					<span class="icon32 icon-color icon-envelope-closed"></span>
+					<div>Messages</div>
+					<div>25</div>
+					<span class="notification red">12</span>
+				</a>
+			</div>
+			
+			 
+					
+			
+				  
+
+		  
+       
+					<!-- content ends -->
+			</div><!--/#content.span10-->
 				</div><!--/fluid-row-->
+				
+		<hr>
+
+		<div class="modal hide fade" id="myModal">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h3>Settings</h3>
+			</div>
+			<div class="modal-body">
+				<p>Here settings can be configured...</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+
+		<footer>
+			<p class="pull-left">&copy; 2017</p>
+			<p class="pull-right">&copy;2017</p>
+		</footer>
 		
 	</div><!--/.fluid-container-->
 
@@ -170,7 +301,7 @@
 	<!-- history.js for cross-browser state change on ajax -->
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
-	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
+	<script src="js/charisma.js"></script>
 	
 		
 </body>

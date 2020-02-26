@@ -10,6 +10,7 @@
     <id column="MERCHANT_ID" property="merchantId" jdbcType="INTEGER" />
     <result column="MERCHANT_PHONE" property="merchantPhone" jdbcType="VARCHAR" />
     <result column="MERCHANT_ADDRESS" property="merchantAddress" jdbcType="VARCHAR" />
+    <result column="MERCHANT_PRICE"  property="merchantprice"/>
     <result column="MERCHANT_STATUS" property="merchantStatus" jdbcType="VARCHAR" />
     <result column="MERCHANT_EMAIL" property="merchantEmail" jdbcType="VARCHAR" />
     <result column="MERCHANT_NAME" property="merchantName" jdbcType="VARCHAR" />

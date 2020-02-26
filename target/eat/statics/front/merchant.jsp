@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -82,11 +83,6 @@
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
-									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
-									</select>
 									<input class="input" placeholder="Search here">
 									<button class="search-btn">Search</button>
 								</form>
@@ -226,10 +222,25 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
+
+		<%--查询商家信息--%>
 		<div id="region">
-
+			<table border="1px solid red" style="text-align: center">
+				<tr>
+					<th>商家名称</th>
+					<th>商家地址</th>
+					<th>人均消费</th>
+				</tr>
+				<c:forEach items="${list}" var="merchant">
+					<tr>
+						<td>${merchant.merchantName}</td>
+						<td>${merchant.merchantAddress}</td>
+						<td>${merchant.merchantprice}</td>
+					</tr>
+				</c:forEach>
+			</table>
 		</div>
-
+		<%--查询商家信息end--%>
 
 		<!-- FOOTER -->
 		<footer id="footer">

@@ -1,4 +1,5 @@
 package cn.kgc.eat.controller;
+import cn.kgc.eat.pojo.EatMerchant;
 import cn.kgc.eat.pojo.EatUser;
 import cn.kgc.eat.service.EatUserService;
 import org.apache.log4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -126,17 +128,33 @@ public class EatUserController {
         }
         return  "front/index";
     }
-    @RequestMapping("/selectByAddress")
-    public String selectByAddress(String address,Model model){
-        List<EatUser> list =EatUserService.selectByAddress(address);
-        if (list!=null){
-            model.addAttribute("list",list);
-            System.out.println("根据地址查询用户成功");
-        }else{
-            System.out.println("根据地址查询用户失败");
+
+    /**
+     * 前台：根据地址或者商家名称查询用户
+     * @param model
+     * @param request
+     * @return
+     */
+    @RequestMapping("/selectByAddressORGreensName")
+    public String selectByAddressORGreensName(Model model, HttpServletRequest request){
+        String text=request.getParameter("text");
+        if (text!=null||!text.trim().equals("")){
+            List<EatMerchant> list =EatUserService.selectByAddressOrGreensName(text);
+            if (list!=null){
+                model.addAttribute("list",list);
+                System.out.println("根据地址查询用户成功");
+                return "merchant";
+            }else{
+                System.out.println("根据地址查询用户失败");
+            }
         }
-        return  "front/userSelectList";
+        return  "front/index";
+
     }
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 package cn.kgc.eat.service.impl;
+import cn.kgc.eat.pojo.EatMerchant;
 import cn.kgc.eat.pojo.EatUser;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -33,12 +34,9 @@ public class EatUserServiceImpl implements EatUserService{
     }
 
     @Override
-    public List<EatUser> selectByAddress(String address) {
-        return EatUserMapper.selectByAddress(address);
+    public List<EatMerchant> selectByAddressOrGreensName(String text) {
+        return EatUserMapper.selectByAddressOrGreensName(text);
     }
 
-    @Override
-    public List<EatUser> selectByGreens(String greensName) {
-        return EatUserMapper.selectByGreens(greensName);
-    }
+
 }
