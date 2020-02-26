@@ -80,7 +80,7 @@
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-edit"></i> 后台修改骑手信息</h2>
+						<h2><i class="icon-edit"></i> 商家添加菜品</h2>
 						<div class="box-icon">
 							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -88,47 +88,53 @@
 						</div>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="${pageContext.request.contextPath}/horseman/updateByPhone">
+						<form class="form-horizontal" action="${pageContext.request.contextPath}/horseman/addHoresman">
 						  <fieldset>
-							<legend style="color: #953b39">后台修改骑手,请按公司规定操作!</legend>
 							  <div class="control-group">
-								  <label class="control-label" for="horsemanName" style="display:inline;">骑手姓名 : </label>
+								  <label class="control-label" for="greensName" style="display:inline;">菜品名称 : </label>
 								  <div class="input-group">
-									  <input type="text" name="horsemanName" class="form-control" id="horsemanName" style="display: inline;width: 200px" autocomplete="off"
-											required title="名字不能为空" placeholder="请输入骑手姓名" value="${eatHorseman.horsemanName}">
+									  <input type="text" name="greensName" class="form-control" id="greensName" style="display: inline;width: 200px" autocomplete="off"
+											required title="菜品名称不能为空" placeholder="请输入菜品名称">
 								  </div>
 							  </div>
 							  <div class="control-group">
-								  <label class="control-label" for="horsemanPassword" style="display:inline;">骑手密码 : </label>
+								  <label class="control-label" for="greensPrice" style="display:inline;">菜品价格 : </label>
 								  <div class="input-group">
-									  <input type="password" name="horsemanPassword" class="form-control" id="horsemanPassword" style="display: inline;width: 200px" autocomplete="off"
-											 pattern="[a-z0-9A-Z]{6,16}" title="密码为6-16位字母或数字组成" placeholder="请输入骑手密码" value="${eatHorseman.horsemanPassword}">
+									  <input type="text" name="greensPrice" class="form-control" id="greensPrice" style="display: inline;width: 200px" autocomplete="off"
+											 pattern="[1-9]\d*(.\d{1,2})?" title="菜品价格的格式如10.00" placeholder="请输入菜品价格">
 								  </div>
 							  </div>
 							  <div class="control-group">
-								  <label class="control-label" for="horsemanBornDate">骑手生日 : </label>
+								  <label class="control-label" for="greensAddress" style="display:inline;">菜品地址 : </label>
 								  <div class="input-group">
-									  <input type="date" name="horsemanBornDate" class="input-xlarge" id="horsemanBornDate" value="02/16/12"
-									  	required title="生日不能为空" value="${eatHorseman.horsemanBornDate}">
+									  <input type="text" name="greensAddress" class="form-control" id="greensAddress" style="display: inline;width: 200px" autocomplete="off"
+											 required title="菜品地址不能为空" placeholder="请输入菜品地址">
 								  </div>
 							  </div>
 							  <div class="control-group">
-								  <label class="control-label" for="horsemanPhone" style="display:inline;">骑手电话 : </label>
+								  <label class="control-label" for="greensTypeId" style="display:inline;">菜系分类 : </label>
 								  <div class="input-group">
-									  <input type="text" name="horsemanPhone" class="form-control" id="horsemanPhone" style="display: inline;width: 200px" autocomplete="off"
-											 pattern="[1]+[3,8]+\d{9}" title="填写正确的手机号码" placeholder="请输入骑手电话" value="${eatHorseman.horsemanPhone}" readonly>
+									  <input type="text" name="greensTypeId" class="form-control" id="greensTypeId" style="display: inline;width: 200px" autocomplete="off"
+											 required title="菜系分类不能为空" placeholder="请输入菜系分类">
 								  </div>
 							  </div>
+
 							  <div class="control-group">
-								  <label class="control-label" for="horsemanAddress" style="display:inline;">骑手地址 : </label>
-								  <div class="input-group">
-									  <input type="text" name="horsemanAddress" class="form-control" id="horsemanAddress" style="display: inline;width: 200px" autocomplete="off"
-											required title="请输入正确的地址" placeholder="请输入骑手地址" value="${eatHorseman.horsemanAddress}">
+								  <label class="control-label">上传LOGO</label>
+								  <div class="controls">
+									  <input type="file" name="greensPic">
+								  </div>
+							  </div>
+
+							  <div class="control-group">
+								  <label class="control-label" for="greensDetails">菜品描述 </label>
+								  <div class="controls">
+									  <textarea class="cleditor" name="greensDetails" id="greensDetails" rows="3"></textarea>
 								  </div>
 							  </div>
 
 							<div class="form-actions">
-							  <button id="submit" type="submit" class="btn btn-primary">修改骑手信息</button>
+							  <button id="submit" type="submit" class="btn btn-primary">增加菜品</button>
 							</div>
 						  </fieldset>
 						</form>

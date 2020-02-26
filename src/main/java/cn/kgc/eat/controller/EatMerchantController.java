@@ -1,4 +1,5 @@
 package cn.kgc.eat.controller;
+import cn.kgc.eat.pojo.EatGreens;
 import cn.kgc.eat.pojo.EatMerchant;
 import cn.kgc.eat.service.EatMerchantService;
 import com.alibaba.fastjson.JSONObject;
@@ -59,7 +60,6 @@ public class EatMerchantController{
     public Object selectMerByName(String greensName,Model model) {
         List<EatMerchant> eatMerchantList = this.EatMerchantService.selectMerByName(greensName);
         model.addAttribute("eatMerchantList",eatMerchantList);
-        System.out.println(eatMerchantList.toString()+"con");
         return "back/merchant";
     }
 

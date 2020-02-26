@@ -211,54 +211,6 @@
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
-		<script>
-			$(function () {
-				//注册
-				function registerHorseman() {
-					var horsemanName = $('#horsemanName').val();
-					var horsemanPassword = $('#horsemanPassword').val();
-					var horsemanBornDate = $('#horsemanBornDate').val();
-					var horsemanPhone = $('#horsemanPhone').val();
-					var horsemanAddress = $('#horsemanAddress').val();
 
-					//输入框非空校验
-					if (horsemanName.length < 1 || horsemanName == "" || horsemanName == null) {
-						wholeError("errorUser", "horsemanName", "9");
-						mouseBlurRedTemple("horsemanName", "horsemanName");
-						$("#horsemanName").text("用户名不能为空");
-						return;
-					} else if (horsemanPassword == undefined || horsemanPassword == "" || horsemanPassword == null) {
-						wholeError("errorReg", "horsemanPassword", "10");
-						mouseBlurRedTemple("horsemanPassword", "horsemanPassword");
-						$("#userLabel10").text("密码不能为空");
-						return;
-					} else if (horsemanBornDate.length < 1 || horsemanBornDate == "" || horsemanBornDate == null) {
-						wholeError("errorPassword", "horsemanBornDate", "11");
-						mouseBlurRedTemple("confirm", "horsemanBornDate");
-						$("#userLabel11").text("密码不能为空");
-						return;
-					} else if (horsemanAddress.length < 1 || horsemanAddress == "" || horsemanAddress == null) {
-						wholeError("errorEmail", "horsemanAddress", "12");
-						mouseBlurRedTemple("horsemanAddress", "horsemanAddress");
-						$("#userLabel12").text("邮箱不能为空");
-						return;
-					} else if (horsemanPhone.length < 1 || horsemanPhone == "" || horsemanPhone == null) {
-						wholeError("errorPhone", "horsemanPhone", "13");
-						mouseBlurRedTemple("horsemanPhone", "horsemanPhone");
-						$("#userLabel13").text("手机号不能为空");
-						return;
-					}
-
-					var dataParams = {
-						horsemanName: horsemanName,
-						horsemanPassword: horsemanPassword,
-						horsemanBornDate: horsemanBornDate,
-						horsemanPhone: horsemanPhone,
-						horsemanAddress: horsemanAddress
-					}
-				}
-			})
-
-		</script>
 </body>
 </html>

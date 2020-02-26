@@ -56,7 +56,7 @@
             </ul>
             <ul class="header-links pull-right">
                 <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+                <li><a href="/order/myorder"><i class="fa fa-user-o"></i> 我的账户</a></li>
             </ul>
         </div>
     </div>
@@ -72,7 +72,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="./img/logo.png" alt="">
+                            <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -81,13 +81,8 @@
                 <!-- SEARCH BAR -->
                 <div class="col-md-6">
                     <div class="header-search">
-                        <form>
-                            <select class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="Search here">
+                        <form method="get" action="/user/selectByAddressORGreensName">
+                            <input class="input" name="text" placeholder="请输入搜索地址或菜名">
                             <button class="search-btn">Search</button>
                         </form>
                     </div>
@@ -118,7 +113,7 @@
                                 <div class="cart-list">
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product01.png" alt="">
+                                            <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product01.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -129,7 +124,7 @@
 
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./img/product02.png" alt="">
+                                            <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product02.png" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -204,7 +199,7 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop01.png" alt="">
+                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/shop01.png" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>Laptop<br>Collection</h3>
@@ -218,7 +213,7 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop03.png" alt="">
+                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/shop03.png" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>Accessories<br>Collection</h3>
@@ -232,7 +227,7 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
+                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/shop02.png" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>Cameras<br>Collection</h3>
@@ -281,7 +276,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product01.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                             <span class="new">NEW</span>
@@ -313,7 +308,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product02.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product02.png" alt="">
                                         <div class="product-label">
                                             <span class="new">NEW</span>
                                         </div>
@@ -344,7 +339,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product03.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product03.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                         </div>
@@ -370,7 +365,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product04.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product04.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -398,7 +393,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product05.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product05.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -516,7 +511,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product06.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product06.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                             <span class="new">NEW</span>
@@ -548,7 +543,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product07.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product07.png" alt="">
                                         <div class="product-label">
                                             <span class="new">NEW</span>
                                         </div>
@@ -579,7 +574,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product08.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product08.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                         </div>
@@ -605,7 +600,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product09.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product09.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -633,7 +628,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product01.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -691,7 +686,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product07.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product07.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -704,7 +699,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product08.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product08.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -717,7 +712,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product09.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product09.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -732,7 +727,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product01.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product01.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -745,7 +740,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product02.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -758,7 +753,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product03.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product03.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -784,7 +779,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product04.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product04.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -797,7 +792,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product05.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product05.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -810,7 +805,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product06.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product06.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -825,7 +820,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product07.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product07.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -838,7 +833,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product08.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product08.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -851,7 +846,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product09.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product09.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -879,7 +874,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product01.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product01.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -892,7 +887,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product02.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product02.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -905,7 +900,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product03.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product03.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -920,7 +915,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product04.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product04.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -933,7 +928,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product05.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product05.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -946,7 +941,7 @@
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
-                                <img src="./img/product06.png" alt="">
+                                <img src="${pageContext.request.contextPath}/statics/plugin/Electro/img/product06.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>

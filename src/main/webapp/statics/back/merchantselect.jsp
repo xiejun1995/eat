@@ -117,25 +117,7 @@
 										</td>
 									</tr>
 								</c:forEach>
-								<c:forEach items="${eatHorsemanList}" var="horsemanList">
-									<tr>
-										<td class="center">${horsemanList.horsemanName}</td>
-										<td class="center">${horsemanList.horsemanPassword}</td>
-										<td class="center"><fm:formatDate pattern="yyyy-MM-dd" value="${horsemanList.horsemanBornDate}"/></td>
-										<td class="center">${horsemanList.horsemanPhone}</td>
-										<td class="center">${horsemanList.horsemanAddress}</td>
-										<td class="center">
-											<a class="btn btn-info" href="${pageContext.request.contextPath}/horseman/selectByPrimaryKey?horsemanPhone=${horsemanList.horsemanPhone}">
-												<i class="icon-edit icon-white"></i>
-												Edit
-											</a>
-											<a class="btn btn-danger" href="${pageContext.request.contextPath}/horseman/deleteByPrimaryKey?horsemanPhone=${horsemanList.horsemanPhone}">
-												<i class="icon-trash icon-white"></i>
-												Delete
-											</a>
-										</td>
-									</tr>
-								</c:forEach>
+
 <%--								<tr>--%>
 <%--									<td class="center"></td>--%>
 <%--									<td class="center"></td>--%>
@@ -258,25 +240,6 @@
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
 
-	<script>
-		$(function () {
-			$.getJSON("${pageContext.request.contextPath}/horseman/selectHoresmanAll",function (result) {
-				var $url = $("tbody");
-				var td = "";
-				// var $result = result.result;
-				$(result).each(function (i) {
-					var horsemanName = result[i].horsemanName;
-					var horsemanPassword = result[i].horsemanPassword;
-					var horsemanBornDate = result[i].horsemanBornDate;
-					var horsemanPhone = result[i].horsemanPhone;
-					var horsemanAddress = result[i].horsemanAddress;
-					td += "<tr><td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>" +
-							"<td><a class=\"btn btn-info\" href=\"${pageContext.request.contextPath}/horseman/selectByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-edit icon-white\"></i>Edit</a>&nbsp;&nbsp;<a class=\"btn btn-danger\" href=\"${pageContext.request.contextPath}/horseman/deleteByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-trash icon-white\"></i>Delete</a></td></tr>";
-				});
-				$url.html(td);
-			});
-		});
-	</script>
 
 	</body>
 	</html>

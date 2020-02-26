@@ -50,4 +50,11 @@ public interface EatGreensMapper {
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
     int updateByPrimaryKey(EatGreens record);
+
+    /**
+     * 添加菜品信息
+     * @姚天祥 set 2020-02-26 09:00
+     *
+     */
+    int addGreens(EatGreens eatGreens);
 }
