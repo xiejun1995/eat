@@ -148,18 +148,18 @@
   </select>
 
   <!--
-    后台根据骑手电话修改骑手信息
+    后台根据骑手电话或姓名查看手信息
     @姚天祥 set 2020-02-23 16:30
      -->
   <select id="selectHoresmanByNameOrPhone" parameterType="cn.kgc.eat.pojo.EatHorseman" resultMap="BaseResultMap">
     SELECT * FROM eat_horseman
     <where>
-      <if test="HORSEMAN_NAME != null and HORSEMAN_NAME !=''">
+<!--      <if test="HORSEMAN_NAME != null and HORSEMAN_NAME !=''">-->
         AND HORSEMAN_NAME LIKE CONCAT ('%',#{horsemanName},'%')
-      </if>
-      <if test="HORSEMAN_PHONE != null and HORSEMAN_PHONE !=''">
+<!--      </if>-->
+<!--      <if test="HORSEMAN_PHONE != null and HORSEMAN_PHONE !=''">-->
         AND HORSEMAN_PHONE LIKE CONCAT ('%',#{horsemanPhone},'%')
-      </if>
+<!--      </if>-->
     </where>
   </select>
 

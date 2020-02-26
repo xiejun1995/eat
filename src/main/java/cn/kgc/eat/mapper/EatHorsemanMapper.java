@@ -77,5 +77,4 @@ public interface EatHorsemanMapper {
      * @姚天祥 set 2020-02-23 16:30
      */
     int updateByPhone(EatHorseman eatHorseman);
-
 }

@@ -71,7 +71,7 @@ public class EatMerchantController{
     public Object selectAll(Model model) {
         List<EatMerchant> eatMerchantList = this.EatMerchantService.selectAll();
         model.addAttribute("eatMerchantList",eatMerchantList);
-        return "back/merchant";
+        return "back/merchantselect";
     }
 
     /**

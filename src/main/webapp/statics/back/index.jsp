@@ -126,7 +126,7 @@
                     <li class="nav-header hidden-tablet">主菜单</li>
                     <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> 用户管理</span></a></li>
                     <li><a class="ajax-link" href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> 菜系管理</span></a></li>
-                    <li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> 商家管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/merchant/selectAll"><i class="icon-edit"></i><span class="hidden-tablet"> 商家管理</span></a></li>
                     <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> 菜品管理</span></a></li>
                     <li><a class="ajax-link" href="${pageContext.request.contextPath}/horseman/selectHoresmanAll"><i class="icon-font"></i><span id="qishou" class="hidden-tablet"> 骑手管理</span></a></li>
                     <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 订单管理</span></a></li>
@@ -300,27 +300,7 @@
 <script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 <!-- application script for Charisma demo -->
 <script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
-<script>
-    $(function () {
-        $.getJSON("${pageContext.request.contextPath}/horseman/selectHoresmanAll",function (result) {
-            var $url = $("#horsemanList");
-            var td = "";
-            var $url2 = ${"#qishou"}
-            var $result = result.result;
-            $url2.click(function () {
-                $($result).each(function (i) {
-                    var horsemanName = $result[i].horsemanName;
-                    var horsemanPassword = $result[i].horsemanPassword;
-                    var horsemanBornDate = $result[i].horsemanBornDate;
-                    var horsemanPhone = $result[i].horsemanPhone;
-                    var horsemanAddress = $result[i].horsemanAddress;
-                    td += "<td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>";
-                });
-                $url.html(td);
-            })
-        })
-    })
-</script>
+
 
 </body>
 </html>

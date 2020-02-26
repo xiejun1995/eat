@@ -171,7 +171,7 @@
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
-	
+
 		
 </body>
 </html>

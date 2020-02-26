@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 	<!DOCTYPE html>
 	<html lang="zh-CN">
@@ -20,15 +22,8 @@
 
 		<!-- The styles -->
 		<link id="bs-css" href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-cerulean.css" rel="stylesheet">
-		<style type="text/css">
-			body {
-				padding-bottom: 40px;
-			}
-			.sidebar-nav {
-				padding: 9px 0;
-			}
-		</style>
 		<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-simplex.css" rel="stylesheet">
 		<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/bootstrap-classic.css" rel="stylesheet">
 		<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/charisma-app.css" rel="stylesheet">
 		<link href="${pageContext.request.contextPath}/statics/plugin/BootStrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
@@ -79,7 +74,7 @@
 				<div class="row-fluid sortable">
 					<div class="box span12">
 						<div class="box-header well" data-original-title>
-							<h2><i class="icon-user"></i> 骑手管理</h2>
+							<h2><i class="icon-user"></i> 商家管理</h2>
 							<div class="box-icon">
 								<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
 								<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -90,50 +85,87 @@
 							<table class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 								<tr>
-									<th>骑手姓名</th>
-									<th>骑手密码</th>
-									<th>出生年月</th>
-									<th>联系电话</th>
-									<th>骑手住址</th>
+									<th>商家ID</th>
+									<th>商家名称</th>
+									<th>商家电子邮箱</th>
+									<th>商家联系电话</th>
+									<th>商家营业状态</th>
+									<th>商家地址</th>
+									<th>商家食品安全档案ID</th>
 									<th>操作</th>
 								</tr>
 								</thead>
 								<tbody>
-								<tr id="horsemanList">
-									<td></td>
-									<td class="center"></td>
-									<td class="center"></td>
-									<td class="center"></td>
-									<td class="center"></td>
-									<td class="center">
-										<a class="btn btn-success" href="#">
-											<i class="icon-zoom-in icon-white"></i>
-											View
-										</a>
-										<a class="btn btn-info" href="#">
-											<i class="icon-edit icon-white"></i>
-											Edit
-										</a>
-										<a class="btn btn-danger" href="#">
-											<i class="icon-trash icon-white"></i>
-											Delete
-										</a>
-									</td>
-								</tr>
+								<c:forEach items="${eatMerchantList}" var="eatMerchant">
+									<tr>
+										<td class="center">${eatMerchant.merchantId}</td>
+										<td class="center">${eatMerchant.merchantName}</td>
+										<td class="center">${eatMerchant.merchantEmail}</td>
+										<td class="center">${eatMerchant.merchantPhone}</td>
+										<td class="center">${eatMerchant.merchantStatus}</td>
+										<td class="center">${eatMerchant.merchantAddress}</td>
+										<td class="center">${eatMerchant.merchantSecurityId}</td>
+										<td class="center">
+											<a class="btn btn-info" href="${pageContext.request.contextPath}/merchant/findMetByid?merchantId=${eatMerchant.merchantId}">
+												<i class="icon-edit icon-white"></i>
+												Edit
+											</a>
+<%--											<a class="btn btn-danger" href="${pageContext.request.contextPath}/merchant/?merchantId=${eatMerchant.merchantId}">--%>
+<%--												<i class="icon-trash icon-white"></i>--%>
+<%--												Delete--%>
+<%--											</a>--%>
+										</td>
+									</tr>
+								</c:forEach>
+								<c:forEach items="${eatHorsemanList}" var="horsemanList">
+									<tr>
+										<td class="center">${horsemanList.horsemanName}</td>
+										<td class="center">${horsemanList.horsemanPassword}</td>
+										<td class="center"><fm:formatDate pattern="yyyy-MM-dd" value="${horsemanList.horsemanBornDate}"/></td>
+										<td class="center">${horsemanList.horsemanPhone}</td>
+										<td class="center">${horsemanList.horsemanAddress}</td>
+										<td class="center">
+											<a class="btn btn-info" href="${pageContext.request.contextPath}/horseman/selectByPrimaryKey?horsemanPhone=${horsemanList.horsemanPhone}">
+												<i class="icon-edit icon-white"></i>
+												Edit
+											</a>
+											<a class="btn btn-danger" href="${pageContext.request.contextPath}/horseman/deleteByPrimaryKey?horsemanPhone=${horsemanList.horsemanPhone}">
+												<i class="icon-trash icon-white"></i>
+												Delete
+											</a>
+										</td>
+									</tr>
+								</c:forEach>
+<%--								<tr>--%>
+<%--									<td class="center"></td>--%>
+<%--									<td class="center"></td>--%>
+<%--									<td class="center"></td>--%>
+<%--									<td class="center"></td>--%>
+<%--									<td class="center"></td>--%>
+<%--									<td class="center">--%>
+<%--										<a class="btn btn-success" href="#">--%>
+<%--											<i class="icon-zoom-in icon-white"></i>--%>
+<%--											View--%>
+<%--										</a>--%>
+<%--										<a class="btn btn-info" href="#">--%>
+<%--											<i class="icon-edit icon-white"></i>--%>
+<%--											Edit--%>
+<%--										</a>--%>
+<%--										<a class="btn btn-danger" href="#">--%>
+<%--											<i class="icon-trash icon-white"></i>--%>
+<%--											Delete--%>
+<%--										</a>--%>
+<%--									</td>--%>
+<%--								</tr>--%>
 								</tbody>
 							</table>
 						</div>
 					</div><!--/span-->
-
 				</div><!--/row-->
-
-
-
-				<!-- content ends -->
 			</div><!--/#content.span10-->
 		</div><!--/fluid-row-->
 
-		<hr>
+
 
 		<div class="modal hide fade" id="myModal">
 			<div class="modal-header">
@@ -238,12 +270,10 @@
 					var horsemanBornDate = result[i].horsemanBornDate;
 					var horsemanPhone = result[i].horsemanPhone;
 					var horsemanAddress = result[i].horsemanAddress;
-					// for (var j = 0;j<i;j++) {
-						td += "<tr><td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>" +
-								"<td class=\"center\"><a class=\"btn btn-success\" href=\"#\"><i class=\"icon-zoom-in icon-white\"></i>View</a><a class=\"btn btn-info\" href=\"#\"><i class=\"icon-edit icon-white\"></i>Edit</a><a class=\"btn btn-danger\" href=\"#\"><i class=\"icon-trash icon-white\"></i>Delete</a></td></tr>";
-					// }
+					td += "<tr><td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>" +
+							"<td><a class=\"btn btn-info\" href=\"${pageContext.request.contextPath}/horseman/selectByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-edit icon-white\"></i>Edit</a>&nbsp;&nbsp;<a class=\"btn btn-danger\" href=\"${pageContext.request.contextPath}/horseman/deleteByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-trash icon-white\"></i>Delete</a></td></tr>";
 				});
-						$url.html(td);
+				$url.html(td);
 			});
 		});
 	</script>
