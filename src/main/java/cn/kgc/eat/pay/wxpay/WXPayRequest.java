@@ -24,7 +24,9 @@ import java.net.UnknownHostException;
 import java.security.KeyStore;
 import java.security.SecureRandom;
 
-import static com.github.wxpay.sdk.WXPayConstants.USER_AGENT;
+import cn.kgc.eat.pay.wxpay.WXPayConstants.SignType;
+
+import static cn.kgc.eat.pay.wxpay.WXPayConstants.USER_AGENT;
 
 public class WXPayRequest {
     private WXPayConfig config;

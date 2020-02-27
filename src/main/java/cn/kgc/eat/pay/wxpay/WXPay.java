@@ -1,7 +1,7 @@
 package cn.kgc.eat.pay.wxpay;
 
 
-
+import cn.kgc.eat.pay.wxpay.WXPayConstants.SignType;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,6 +16,7 @@ public class WXPay {
 
     public WXPay(final WXPayConfig config) throws Exception {
         this(config, null, true, false);
+
     }
 
     public WXPay(final WXPayConfig config, final boolean autoReport) throws Exception {

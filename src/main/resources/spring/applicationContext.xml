@@ -14,7 +14,7 @@
 	                http://www.springframework.org/schema/context
 	                http://www.springframework.org/schema/context/spring-context.xsd">
     <!--开启自动扫描-->
-    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.interceptor"/>
+    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.pay,cn.kgc.eat.idworker"/>
     <!--读取db.properties -->
     <context:property-placeholder location="classpath:jdbc/jdbc.properties"/>
 

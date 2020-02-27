@@ -1,6 +1,6 @@
 package cn.kgc.eat.pay.wxpay;
 
-import com.github.wxpay.sdk.WXPayConstants.SignType;
+import cn.kgc.eat.pay.wxpay.WXPayConstants.SignType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;

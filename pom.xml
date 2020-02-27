@@ -25,6 +25,8 @@
     <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>2.13.0</log4j.version>
+    <!--jboss-logging日志包版本-->
+    <jboss-logging.version>3.4.1.Final</jboss-logging.version>
     <!--servlet-api配置-->
     <servlet-api.version>2.5</servlet-api.version>
     <!--java标准标签库-->
@@ -37,6 +39,24 @@
     <jsp-api.version>2.0</jsp-api.version>
     <!--druid是阿里巴巴开发的Java语言中最好的数据库连接池-->
     <druid.version>1.0.9</druid.version>
+    <!--hibernate-validator包版本配置-->
+    <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
+    <validation-api.version>2.0.1.Final</validation-api.version>
+    <!-- 时间操作组件 -->
+    <joda-time.version>2.10.5</joda-time.version>
+    <!-- Jackson Json处理工具包 -->
+    <jackson-databind.version>2.10.2</jackson-databind.version>
+    <jackson-core.version>2.10.2</jackson-core.version>
+    <jackson-annotations.version>2.10.2</jackson-annotations.version>
+    <!-- httpclient -->
+    <httpclient.version>4.5.11</httpclient.version>
+    <!--mybatis分页插件-->
+    <mybatis-paginator.version>1.2.17</mybatis-paginator.version>
+    <pagehelper.version>5.1.11</pagehelper.version>
+    <!-- Redis客户端 -->
+    <jedis.version>3.2.0</jedis.version>
+    <!-- solr客户端 -->
+    <solr-solrj.version>8.4.1</solr-solrj.version>
     <!--文件的编码格式-->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -172,6 +192,12 @@
       <version>${slf4j.version}</version>
     </dependency>
     <!-- log end -->
+    <!--jboss-logging-->
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging</artifactId>
+      <version>${jboss-logging.version}</version>
+    </dependency>
     <!--commons-->
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -187,6 +213,11 @@
       <groupId>commons-fileupload</groupId>
       <artifactId>commons-fileupload</artifactId>
       <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>3.3</version>
     </dependency>
     <!--mybatis-->
     <dependency>
@@ -241,6 +272,67 @@
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
       <version>2.3.29</version>
+    </dependency>
+    <!--数据验证依赖-->
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>${validation-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
+    <!-- 时间操作组件 -->
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${joda-time.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson-annotations.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databind.version}</version>
+    </dependency>
+    <!-- httpclient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>${httpclient.version}</version>
+    </dependency>
+    <!--mybatis分页插件-->
+    <dependency>
+      <groupId>com.github.miemiedev</groupId>
+      <artifactId>mybatis-paginator</artifactId>
+      <version>${mybatis-paginator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>${pagehelper.version}</version>
+    </dependency>
+    <!-- Redis客户端 -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${jedis.version}</version>
+    </dependency>
+    <!-- solr客户端 -->
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <version>${solr-solrj.version}</version>
     </dependency>
   </dependencies>
 
