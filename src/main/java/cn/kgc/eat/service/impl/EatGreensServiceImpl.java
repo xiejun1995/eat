@@ -57,5 +57,25 @@ public class EatGreensServiceImpl implements EatGreensService{
         return eatGreens;
     }
 
+    /**
+     * @author 齐宏伟
+     * @desc 删除菜品信息（后台）
+     * @date 2020/2/26
+     */
+    public int deleteByPrimaryKey(Long greensId) {
+       int count = EatGreensMapper.deleteByPrimaryKey(greensId);
+        return count;
+    }
+
+    /**
+     * @author 齐宏伟
+     * @desc 根据商家id查询菜品（前台）
+     * @date 2020/2/25
+     */
+    public List<EatGreens> getGreensListByMerchantId(Integer MERCHANT_SECURITY_ID) {
+        List<EatGreens> list = EatGreensMapper.getGreensListByMerchantId(MERCHANT_SECURITY_ID);
+        return list;
+    }
+
 
 }

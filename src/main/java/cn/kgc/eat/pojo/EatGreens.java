@@ -62,11 +62,21 @@ public class EatGreens {
      * @desc 菜品表和菜系表连接查询，需要得到菜品所属菜系名称
      * @date 2020/2/25
      */
+    private int greensSecurityId;
+
     private String cuisineName;
 
     private String greensPic;
 
     private String greensDetails;
+
+    public int getGreensSecurityId() {
+        return greensSecurityId;
+    }
+
+    public void setGreensSecurityId(int greensSecurityId) {
+        this.greensSecurityId = greensSecurityId;
+    }
 
     public String getGreensPic() {
         return greensPic;

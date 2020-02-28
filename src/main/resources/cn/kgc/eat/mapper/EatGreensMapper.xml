@@ -13,6 +13,7 @@
     <result column="GREENS_ADDRESS" property="greensAddress" jdbcType="VARCHAR" />
     <result column="GREENS_GRADE_ID" property="greensGradeId" jdbcType="BIGINT" />
     <result column="GREENS_TYPE_ID" property="greensTypeId" jdbcType="BIGINT" />
+    <result column="MERCHANT_SECURITY_ID" property="greensSecurityId"/>
     <!--菜品表和菜系表连接查询，需要得到菜品所属菜系名称-->
     <result column="CUISINE_NAME" property="cuisineName" jdbcType="VARCHAR"/>
     <result column="GREENS_PIC" property="greensPic" jdbcType="VARCHAR"/>
@@ -85,6 +86,12 @@
       <if test="greensTypeId != null" >
         GREENS_TYPE_ID,
       </if>
+      <if test="greensPic != null" >
+        GREENS_PIC,
+      </if>
+      <if test="greensDetails != null" >
+        GREENS_DETAILS,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="greensId != null" >
@@ -104,6 +111,12 @@
       </if>
       <if test="greensTypeId != null" >
         #{greensTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="greensPic != null" >
+        #{greensPic,jdbcType=VARCHAR},
+      </if>
+      <if test="greensDetails != null" >
+        #{greensDetails,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -169,5 +182,11 @@
         AND g.GREENS_TYPE_ID = c.CUISINE_ID
       </otherwise>
     </choose>
+  </select>
+  <!--根据商家id查询所属菜品-->
+  <select id="getGreensListByMerchantId" resultMap="BaseResultMap">
+    SELECT g.*,m.MERCHANT_NAME FROM eat_greens AS g,eat_merchant AS m
+    WHERE g.MERCHANT_SECURITY_ID = m.MERCHANT_ID
+    AND g.MERCHANT_SECURITY_ID = #{MERCHANT_SECURITY_ID}
   </select>
 </mapper>

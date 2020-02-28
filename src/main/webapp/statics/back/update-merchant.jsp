@@ -11,17 +11,23 @@
     <title>修改商家信息</title>
 </head>
 <body>
-<div>
-    <h2>管理员修改商家信息</h2>
+<div style="margin-left: 500px;margin-top:50px;border: #317eac solid 1px;width: 320px;height: 500px;padding-left: 100px">
+    <h2>修改商家信息</h2>
     <form method="get" action="/eat_war_exploded/updateMerchant">
         <input type="hidden" name="merchantId" value="${eatMerchant.merchantId}"/><br/>
-        商家电话号码：<input type="text" name="merchantPhone" value="${eatMerchant.merchantPhone}"/><br/>
-        商家地址：<input type="text" name="merchantAddress" value="${eatMerchant.merchantAddress}"/><br/>
-        商家状态：<input  name="merchantStatus" value="${eatMerchant.merchantStatus}"/><br/>
-        商家邮箱：<input name="merchantEmail" value="${eatMerchant.merchantEmail}"/><br/>
-        商家名称：<input name="merchantName" value="${eatMerchant.merchantName}"/><br/>
-        食品安全档案ID：<input name="merchantSecurityId" value="${eatMerchant.merchantSecurityId}"/><br/>
-        <input type="submit" value="提交">&nbsp;&nbsp;
+        商家电话号码：<br>
+        &nbsp;&nbsp;<input type="text" name="merchantPhone" value="${eatMerchant.merchantPhone}"/><br/>
+        商家地址：<br>
+        &nbsp;&nbsp;<input type="text" name="merchantAddress" value="${eatMerchant.merchantAddress}"/><br/>
+        商家状态：<br>
+        &nbsp;&nbsp;<input  name="merchantStatus" value="${eatMerchant.merchantStatus}"/><br/>
+        商家邮箱：<br>
+        &nbsp;&nbsp;<input name="merchantEmail" value="${eatMerchant.merchantEmail}"/><br/>
+        商家名称：<br>
+        &nbsp;&nbsp;<input name="merchantName" value="${eatMerchant.merchantName}"/><br/>
+        食品安全档案ID：<br>
+        &nbsp;&nbsp;<input name="merchantSecurityId" value="${eatMerchant.merchantSecurityId}"/><br/>
+        &nbsp;&nbsp;<input type="submit" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="reset" value="重置">
     </form>
 </div>

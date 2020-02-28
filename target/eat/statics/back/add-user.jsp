@@ -11,20 +11,34 @@
     <title>用户增加页面</title>
 </head>
 <body>
-<div>
-    <h2>管理员添加用户信息</h2>
+<div style="margin-left: 500px;margin-top:50px;border: #317eac solid 1px;width: 320px;height: 500px;padding-left: 100px">
+    <h2>添加用户信息</h2>
     <form method="get" action="/eat_war_exploded/user/addUser">
-        用户姓名：<input name="userName"/><br/>
-        用户密码：<input type="password" name="userPassword"/><br/>
-        出生日期：<input type="date" name="userBornDate"/><br/>
-        电话号码：<input  name="userPhone"/><br/>
-        商家住址：<input name="userAddress"/><br/>
-        收货地址ID：<input name="userAddressId"/><br/>
-        邮&nbsp;&nbsp;箱：<input name="userEmail"/><br/>
-        性&nbsp;&nbsp;别：<input name="userGender" type="radio" value="男" checked/>男
-               <input name="userGender" type="radio" value="女"/>女<br/>
-        用户角色：<input name="userRole"/><br/>
-        <input type="submit" value="提交">&nbsp;&nbsp;
+        用户姓名：<br/>
+        &nbsp;&nbsp;<input type="text" name="userName" required title="用户姓名不能为空"  placeholder="请输入用户姓名"/><br/>
+        用户密码：<br/>
+        &nbsp;&nbsp;<input type="text" name="userPassword" required title="" placeholder="请设置用户密码"/><br/>
+        出生日期：<br/>
+        &nbsp;&nbsp;<input type="date" name="userBornDate" required title=""/><br/>
+        电话号码：<br/>
+        &nbsp;&nbsp;<input  name="userPhone" placeholder="请输入电话号码" required title=""/><br/>
+        商家地址：<br/>
+        &nbsp;&nbsp;<input name="userAddress" placeholder="请输入商家地址" required title=""/>
+        &nbsp;&nbsp;
+        <input type="hidden" name="userAddressId" placeholder="请输入收货地址ID" required title="" value="1"/><br/>
+        邮&nbsp;&nbsp;箱：<br/>
+        &nbsp;&nbsp;<input name="userEmail" placeholder="请输入用户邮箱" required title=""/><br/>
+        性&nbsp;&nbsp;别：<input name="userGender" type="radio" value="男" checked/>男&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="userGender" type="radio" value="女"/>女<br/>
+        用户角色：<br/> &nbsp;&nbsp;
+        <select name="userRole">
+        <option value="1">管理员</option>
+        <option value="2">经理</option>
+        <option value="3">普通员工</option>
+    </select>
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="reset" value="重置">
     </form>
 </div>

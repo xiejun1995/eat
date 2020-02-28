@@ -147,7 +147,7 @@
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-user"></i> 菜品信息列表</h2>
-						<a class="btn btn-success" href="${pageContext.request.contextPath}/toAddGreens" style="margin-left: 665px">
+						<a class="btn btn-success" href="${pageContext.request.contextPath}/toAddGreens" style="margin-left: 685px">
 							<i class="icon-zoom-in icon-white"></i>
 							添加
 						</a>
@@ -181,7 +181,7 @@
 											<i class="icon-edit icon-white"></i>
 											修改
 										</a>
-										<a class="btn btn-danger" href="${pageContext.request.contextPath}/deleteMerchant?greensId=${Greens.greensId}">
+										<a class="btn btn-danger" href="${pageContext.request.contextPath}/deleteGreens?greensId=${Greens.greensId}">
 											<i class="icon-trash icon-white"></i>
 											删除
 										</a>
