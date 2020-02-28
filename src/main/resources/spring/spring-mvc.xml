@@ -14,7 +14,7 @@
             http://www.springframework.org/schema/task
 	        http://www.springframework.org/schema/task/spring-task.xsd">
     <!--配置自动扫描包  -->
-    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.pay,cn.kgc.eat.idworker"/>
+    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.pay,cn.kgc.eat.id.worker.others"/>
     <!--  启动webconfig并设置内容协商管理-->
     <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" >
         <!--配置信息转换器  -->

@@ -196,4 +196,26 @@
   <select id="getEatUserByUserName" resultType="EatUser">
         select * from eat_user u where u.USER_NAME = #{userName,jdbcType=VARCHAR}
   </select>
+  <!--查询用户信息-->
+  <select id="getUserList" resultMap="BaseResultMap">
+    SELECT * FROM eat_user
+  </select>
+  <!--根据用户id查询用户信息-->
+  <select id="getUserById" resultMap="BaseResultMap">
+    SELECT * FROM eat_user WHERE USER_ID = #{USER_ID}
+  </select>
+  <!--
+    前台骑手查询用户信息
+    @姚天祥  set 2020-02-25 11:00
+  -->
+  <select id="findUserByPhone" resultMap="BaseResultMap">
+    SELECT * FROM eat_user WHERE USER_PHONE = #{userPhone}
+  </select>
+  <!--根据商家地址/菜品名称查询-->
+  <select id="selectByAddressOrGreensName" resultMap="merchantResultMap">
+       SELECT m.* FROM eat_merchant AS m,eat_greens AS g
+       WHERE ( g.GREENS_NAME LIKE CONCAT('%',#{text},'%') OR
+       m.MERCHANT_ADDRESS LIKE CONCAT ('%',#{text},'%'))
+       AND g.GREENS_MERCHANT_ID=m.MERCHANT_ID
+  </select>
 </mapper>

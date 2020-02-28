@@ -1,5 +1,7 @@
 package cn.kgc.eat.pojo;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class EatUser {
@@ -17,6 +19,7 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "用户名不能为空")
     private String userName;
 
     /**
@@ -25,6 +28,7 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "密码不能为空")
     private String userPassword;
 
     /**
@@ -33,6 +37,8 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "出生日期不能为空")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date userBornDate;
 
     /**
@@ -41,6 +47,7 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "电话不能为空")
     private String userPhone;
 
     /**
@@ -49,6 +56,7 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "地址不能为空")
     private String userAddress;
 
     /**
@@ -65,6 +73,7 @@ public class EatUser {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+    @NotEmpty(message = "邮箱不能为空")
     private String userEmail;
 
     /**
@@ -322,4 +331,5 @@ public class EatUser {
     public void setUserRole(Integer userRole) {
         this.userRole = userRole;
     }
+
 }

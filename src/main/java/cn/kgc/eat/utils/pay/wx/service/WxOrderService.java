@@ -1,8 +1,8 @@
 package cn.kgc.eat.utils.pay.wx.service;
 
 
-import com.alipay.api.domain.PreOrderResult;
 import cn.kgc.eat.utils.pay.wx.entity.PayResult;
+import cn.kgc.eat.utils.pay.wx.entity.PreOrderResult;
 
 import javax.servlet.http.HttpServletRequest;
 

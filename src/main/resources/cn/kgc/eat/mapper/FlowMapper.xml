@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sihai.mapper.FlowMapper" >
-  <resultMap id="BaseResultMap" type="com.sihai.pojo.Flow" >
+<mapper namespace="cn.kgc.eat.mapper.FlowMapper" >
+  <resultMap id="BaseResultMap" type="cn.kgc.eat.pojo.Flow" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="flow_num" property="flowNum" jdbcType="VARCHAR" />
     <result column="order_num" property="orderNum" jdbcType="VARCHAR" />
@@ -72,7 +72,7 @@
   <sql id="Base_Column_List" >
     id, flow_num, order_num, product_id, paid_amount, paid_method, buy_counts, create_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.sihai.pojo.FlowExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.kgc.eat.pojo.FlowExample" >
     select
     <if test="distinct" >
       distinct
@@ -96,13 +96,13 @@
     delete from flow
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.sihai.pojo.FlowExample" >
+  <delete id="deleteByExample" parameterType="cn.kgc.eat.pojo.FlowExample" >
     delete from flow
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.sihai.pojo.Flow" >
+  <insert id="insert" parameterType="cn.kgc.eat.pojo.Flow" >
     insert into flow (id, flow_num, order_num, 
       product_id, paid_amount, paid_method, 
       buy_counts, create_time)
@@ -110,7 +110,7 @@
       #{productId,jdbcType=VARCHAR}, #{paidAmount,jdbcType=VARCHAR}, #{paidMethod,jdbcType=INTEGER}, 
       #{buyCounts,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.sihai.pojo.Flow" >
+  <insert id="insertSelective" parameterType="cn.kgc.eat.pojo.Flow" >
     insert into flow
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -165,7 +165,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.sihai.pojo.FlowExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="cn.kgc.eat.pojo.FlowExample" resultType="java.lang.Integer" >
     select count(*) from flow
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -217,7 +217,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sihai.pojo.Flow" >
+  <update id="updateByPrimaryKeySelective" parameterType="cn.kgc.eat.pojo.Flow" >
     update flow
     <set >
       <if test="flowNum != null" >
@@ -244,7 +244,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.sihai.pojo.Flow" >
+  <update id="updateByPrimaryKey" parameterType="cn.kgc.eat.pojo.Flow" >
     update flow
     set flow_num = #{flowNum,jdbcType=VARCHAR},
       order_num = #{orderNum,jdbcType=VARCHAR},

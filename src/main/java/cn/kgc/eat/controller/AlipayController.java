@@ -1,6 +1,6 @@
 package cn.kgc.eat.controller;
 
-import cn.kgc.eat.idworker.Sid;
+import cn.kgc.eat.id.worker.others.Sid;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.internal.util.AlipaySignature;

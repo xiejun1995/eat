@@ -155,4 +155,68 @@
       MERCHANT_SECURITY_ID = #{merchantSecurityId,jdbcType=INTEGER}
     where MERCHANT_ID = #{merchantId,jdbcType=INTEGER}
   </update>
+
+  <!--根据根据商家名称、电话号码查询商家信息-->
+  <select id="getMerchantListByName" resultMap="BaseResultMap">
+      SELECT * FROM eat_merchant
+      <where>
+        <if test="MERCHANT_NAME != null and MERCHANT_NAME !=''">
+          AND MERCHANT_NAME LIKE CONCAT ('%',#{MERCHANT_NAME},'%')
+        </if>
+        <if test="MERCHANT_PHONE != null and MERCHANT_PHONE !=''">
+          AND MERCHANT_PHONE LIKE CONCAT ('%',#{MERCHANT_PHONE},'%')
+        </if>
+      </where>
+  </select>
+  <!--
+    根据ID查询商家信息详情
+    @姚天祥 set 2020-02-24 08:30
+  -->
+  <select id="findMetByid" resultMap="BaseResultMap">
+    SELECT * FROM eat_merchant WHERE MERCHANT_ID = #{merchantId}
+  </select>
+
+  <!--
+    根据名称、地址查询商家信息
+    @姚天祥 set 2020-02-24 09:30
+  -->
+  <select id="selectMerByNameAddressGreensN" resultMap="BaseResultMap">
+    SELECT * FROM eat_merchant WHERE 1=1
+    <!--      <if test="MERCHANT_NAME !=null and MERCHANT_NAME !=''">-->
+    AND MERCHANT_NAME LIKE CONCAT ('%',#{merchantName},'%')
+    <!--      </if>-->
+    <!--      <if test="MERCHANT_ADDRESS !=null and MERCHANT_ADDRESS !=''">-->
+    AND MERCHANT_ADDRESS LIKE CONCAT ('%',#{merchantAddress},'%')
+    <!--      </if>-->
+  </select>
+  <!--
+    根据菜品名称查询商家信息
+    @姚天祥 set 2020-02-24 09:30
+  -->
+  <select id="selectMerByName" resultMap="BaseResultMap">
+    SELECT m.* FROM eat_merchant AS m ,eat_greens AS g ,eat_cuisine AS c
+    WHERE m.MERCHANT_SECURITY_ID = c.CUISINE_ID
+    AND c.CUISINE_ID = g.GREENS_TYPE_ID
+    AND g.GREENS_NAME LIKE CONCAT ('%',#{greensName},'%')
+  </select>
+
+  <!--
+    查询所有商家信息列表
+    @姚天祥 set 2020-02-24 09:30
+  -->
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT * FROM eat_merchant
+  </select>
+
+  <!--
+    修改商家信息
+    @姚天祥 set 2020-02-24 10:30
+  -->
+  <update id="updateById" parameterType="cn.kgc.eat.pojo.EatMerchant">
+    UPDATE eat_merchant SET
+    MERCHANT_PHONE = #{merchantPhone},MERCHANT_ADDRESS = #{merchantAddress},
+    MERCHANT_STATUS = #{merchantStatus},MERCHANT_EMAIL = #{merchantEmail},
+    MERCHANT_NAME = #{merchantName},MERCHANT_SECURITY_ID = #{merchantSecurityId}
+    WHERE MERCHANT_ID = #{merchantId}
+  </update>
 </mapper>

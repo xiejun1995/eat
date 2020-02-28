@@ -1,5 +1,8 @@
 package cn.kgc.eat.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class EatHorseman {
@@ -33,6 +36,9 @@ public class EatHorseman {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JSONField(format = "yyyy-MM-dd")
     private Date horsemanBornDate;
 
     /**

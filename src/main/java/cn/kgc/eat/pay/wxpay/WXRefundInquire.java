@@ -12,7 +12,7 @@ import java.util.Map;
 public class WXRefundInquire {
     public static void main(String[] args) throws Exception {
 
-        MyConfig config = new MyConfig();
+        MyWXConfig config = new MyWXConfig();
         WXPay wxpay = new WXPay(config);
 
         Map<String, String> data = new HashMap<String, String>();

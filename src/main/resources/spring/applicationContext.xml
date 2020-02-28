@@ -14,10 +14,12 @@
 	                http://www.springframework.org/schema/context
 	                http://www.springframework.org/schema/context/spring-context.xsd">
     <!--开启自动扫描-->
-    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.pay,cn.kgc.eat.idworker"/>
+    <context:component-scan base-package="cn.kgc.eat.pojo,cn.kgc.eat.service,cn.kgc.eat.mapper,cn.kgc.eat.controller,cn.kgc.eat.utils,cn.kgc.eat.pay,cn.kgc.eat.id.worker.others"/>
     <!--读取db.properties -->
     <context:property-placeholder location="classpath:jdbc/jdbc.properties"/>
+    <bean id="sid" class="cn.kgc.eat.id.worker.others.Sid">
 
+    </bean>
     <!--ctrl+shift+h 用于查找类的所在层次结构  -->
     <!-- 配置数据源 -->
     <!-- 阿里巴巴中的druid获取数据源 -->

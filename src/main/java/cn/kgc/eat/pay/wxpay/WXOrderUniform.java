@@ -12,9 +12,8 @@ import java.util.Map;
 public class WXOrderUniform {
     public static void main(String[] args) throws Exception {
 
-        MyConfig config = new MyConfig();
+        MyWXConfig config = new MyWXConfig();
         WXPay wxpay = new WXPay(config);
-
         Map<String, String> data = new HashMap<String, String>();
         //添加商品描述
         data.put("body", "吃了么下单");

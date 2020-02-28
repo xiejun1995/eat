@@ -1,6 +1,6 @@
 package cn.kgc.eat.utils.pay.wx.util;
 
-import com.sihai.wx.entity.PayResult;
+import cn.kgc.eat.utils.pay.wx.entity.PayResult;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder;

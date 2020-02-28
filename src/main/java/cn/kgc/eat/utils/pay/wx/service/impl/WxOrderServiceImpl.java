@@ -1,8 +1,14 @@
 package cn.kgc.eat.utils.pay.wx.service.impl;
 
+import cn.kgc.eat.utils.pay.WeChatIDKEY;
+import cn.kgc.eat.utils.pay.wx.config.WeChatConfig;
+import cn.kgc.eat.utils.pay.wx.entity.PayResult;
 import cn.kgc.eat.utils.pay.wx.entity.PreOrder;
 import cn.kgc.eat.utils.pay.wx.service.WxOrderService;
-import com.alipay.api.domain.PreOrderResult;
+import cn.kgc.eat.utils.pay.wx.util.HttpUtil;
+import cn.kgc.eat.utils.pay.wx.util.Sign;
+import cn.kgc.eat.utils.pay.wx.util.XmlUtil;
+import cn.kgc.eat.utils.pay.wx.entity.PreOrderResult;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;

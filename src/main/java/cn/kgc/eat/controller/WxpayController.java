@@ -1,11 +1,12 @@
 package cn.kgc.eat.controller;
 
-import cn.kgc.eat.idworker.Sid;
+import cn.kgc.eat.id.worker.others.Sid;
 import cn.kgc.eat.pojo.Orders;
 import cn.kgc.eat.pojo.Product;
 import cn.kgc.eat.service.OrdersService;
 import cn.kgc.eat.service.ProductService;
 import cn.kgc.eat.utils.pay.wx.service.WxOrderService;
+import cn.kgc.eat.utils.pay.wx.entity.PreOrderResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,8 +45,6 @@ public class WxpayController {
 	/**
 	 * 
 	 * @Description: 生成预付单
-	 * @param amount
-	 * @param title
 	 * @param request
 	 * @param response
 	 * @return
@@ -76,7 +75,6 @@ public class WxpayController {
 		
 		ModelAndView mv = new ModelAndView("payQrCode");
 		mv.addObject("qrCodeUrl", preOrderResult.getCode_url());
-		
 		return mv;
 	}
 	
@@ -103,8 +101,7 @@ public class WxpayController {
 	 * @Description: 微信支付异步通知
 	 * 					1. 支付成功修改订单状态，标记为成功
 	 * 					2. 生成支付流水
-	 * @param amount
-	 * @param title
+
 	 * @param request
 	 * @param response
 	 * @return
@@ -115,8 +112,8 @@ public class WxpayController {
 	 */
 	@RequestMapping(value = "/notify")
 	public void notify(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		PayResult payResult = wxOrderService.getWxPayResult(request);
+
+		cn.kgc.eat.utils.pay.wx.entity.PayResult payResult = wxOrderService.getWxPayResult(request);
 		
 		boolean isPaid = payResult.getReturn_code().equals("SUCCESS") ? true : false;
 		

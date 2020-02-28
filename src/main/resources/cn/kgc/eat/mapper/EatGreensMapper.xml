@@ -13,6 +13,11 @@
     <result column="GREENS_ADDRESS" property="greensAddress" jdbcType="VARCHAR" />
     <result column="GREENS_GRADE_ID" property="greensGradeId" jdbcType="BIGINT" />
     <result column="GREENS_TYPE_ID" property="greensTypeId" jdbcType="BIGINT" />
+    <result column="MERCHANT_SECURITY_ID" property="greensSecurityId"/>
+    <!--菜品表和菜系表连接查询，需要得到菜品所属菜系名称-->
+    <result column="CUISINE_NAME" property="cuisineName" jdbcType="VARCHAR"/>
+    <result column="GREENS_PIC" property="greensPic" jdbcType="VARCHAR"/>
+    <result column="GREENS_DETAILS" property="greensDetails" jdbcType="VARCHAR"/>
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -81,6 +86,12 @@
       <if test="greensTypeId != null" >
         GREENS_TYPE_ID,
       </if>
+      <if test="greensPic != null" >
+        GREENS_PIC,
+      </if>
+      <if test="greensDetails != null" >
+        GREENS_DETAILS,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="greensId != null" >
@@ -100,6 +111,12 @@
       </if>
       <if test="greensTypeId != null" >
         #{greensTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="greensPic != null" >
+        #{greensPic,jdbcType=VARCHAR},
+      </if>
+      <if test="greensDetails != null" >
+        #{greensDetails,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -142,5 +159,84 @@
       GREENS_GRADE_ID = #{greensGradeId,jdbcType=BIGINT},
       GREENS_TYPE_ID = #{greensTypeId,jdbcType=BIGINT}
     where GREENS_ID = #{greensId,jdbcType=BIGINT}
+  </update>
+
+  <!--根据菜品名称，价格，区域，分类查询菜品信息-->
+  <select id="getGreensList" resultMap="BaseResultMap" parameterType="cn.kgc.eat.pojo.EatGreens">
+    SELECT g.*,c.CUISINE_NAME FROM eat_greens AS g ,eat_cuisine AS c
+    WHERE 1=1
+    <choose>
+      <when test="GREENS_NAME!=null and GREENS_NAME!=''">
+        AND GREENS_NAME LIKE CONCAT ('%',#{GREENS_NAME},'%')
+      </when>
+      <when test="GREENS_PRICE!=null and GREENS_PRICE!=''">
+        AND GREENS_PRICE LIKE CONCAT ('%',#{GREENS_PRICE},'%')
+      </when>
+      <when test="CUISINE_NAME!=null and CUISINE_NAME!=''">
+        AND CUISINE_NAME LIKE CONCAT('%',#{CUISINE_NAME},'%')
+      </when>
+      <when test="GREENS_ADDRESS!=null and GREENS_ADDRESS!=''">
+        AND GREENS_ADDRESS LIKE CONCAT ('%',#{GREENS_ADDRESS},'%')
+      </when>
+      <otherwise>
+        AND g.GREENS_TYPE_ID = c.CUISINE_ID
+      </otherwise>
+    </choose>
+  </select>
+  <!--根据商家id查询所属菜品-->
+  <select id="getGreensListByMerchantId" resultMap="BaseResultMap">
+    SELECT g.*,m.MERCHANT_NAME FROM eat_greens AS g,eat_merchant AS m
+    WHERE g.MERCHANT_SECURITY_ID = m.MERCHANT_ID
+    AND g.MERCHANT_SECURITY_ID = #{MERCHANT_SECURITY_ID}
+  </select>
+  <!--
+   添加菜品信息
+   @姚天祥 set 2020-02-26 09:00
+ -->
+  <insert id="addGreens" parameterType="cn.kgc.eat.pojo.EatGreens">
+    INSERT INTO eat_greens (GREENS_NAME,GREENS_PRICE,GREENS_ADDRESS,GREENS_GRADE_ID,GREENS_TYPE_ID,MERCHANT_SECURITY_ID,GREENS_PIC,GREENS_DETAILS)
+        VALUES (#{greensName},#{greensPrice},#{greensAddress},0,#{greensTypeId},#{greensSecurityId},#{greensPic},#{greensDetails})
+  </insert>
+
+  <!--
+    删除菜品信息
+    @姚天祥 set 2020-02-27 09;00
+  -->
+  <delete id="deleteById">
+    DELETE FROM eat_greens WHERE GREENS_ID = #{greensId}
+  </delete>
+
+  <!--
+    查询所有菜品
+    @姚天祥 set 2020-02-27 10:00
+  -->
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT * FROM eat_greens AS g,eat_merchant AS m
+    WHERE g.MERCHANT_SECURITY_ID = m.MERCHANT_ID
+    AND MERCHANT_NAME = #{greensName}
+  </select>
+
+  <!--
+    根据ID查询菜品详情
+    @姚天祥 set 2020-02-27 14:00
+  -->
+  <select id="findGreensById" resultMap="BaseResultMap">
+    SELECT * FROM eat_greens WHERE GREENS_ID = #{greensId}
+  </select>
+
+  <!--
+    根据ID修改菜品详情
+    @姚天祥 set 2020-02-27 14:00
+  -->
+  <update id="updateGreensById" parameterType="cn.kgc.eat.pojo.EatGreens">
+    UPDATE eat_greens SET
+    GREENS_NAME = #{greensName},
+    GREENS_PRICE = #{greensPrice},
+    GREENS_ADDRESS = #{greensAddress},
+    GREENS_TYPE_ID = #{greensTypeId},
+    MERCHANT_SECURITY_ID = #{greensSecurityId},
+    GREENS_PIC = #{greensPic},
+    GREENS_DETAILS = #{greensDetails}
+    WHERE GREENS_ID = #{greensId}
   </update>
 </mapper>

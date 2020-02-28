@@ -57,6 +57,32 @@
     <jedis.version>3.2.0</jedis.version>
     <!-- solr客户端 -->
     <solr-solrj.version>8.4.1</solr-solrj.version>
+    <!--任务调度-->
+    <quartz.version>2.3.2</quartz.version>
+    <!-- spring rabbitmq AMQP（Advanced Message Queuing Protocol） 高级消息队列 -->
+    <spring-rabbit.version>2.2.4.RELEASE</spring-rabbit.version>
+    <!--guava-->
+    <guava.version>28.2-jre</guava.version>
+    <!--MockWebServer-->
+    <!--A scriptable web server for testing HTTP clients-->
+    <mockwebserver.version>2.7.5</mockwebserver.version>
+    <!--shiro-all-->
+    <shiro-all.version>1.5.1</shiro-all.version>
+    <!--javax.mail-->
+    <javax.mail.version>1.6.2</javax.mail.version>
+    <!--Microsoft Office（Excel、WORD、PowerPoint、Visio等）格式档案读和写的功能包-->
+    <poi.version>4.1.2</poi.version>
+    <!--xmlpull解析器-->
+    <xmlpull.version>1.1.3.4d_b4_min</xmlpull.version>
+    <xpp3.version>1.1.4c</xpp3.version>
+    <!--xstream 可以轻易的将Java对象和xml文档相互转换-->
+    <xstream.version>1.4.11.1</xstream.version>
+    <!--jaxb是Java Architecture for XML Binding的缩写。可以将一个Java对象转变成为XML格式，反之亦然-->
+    <jaxb-api.version>2.3.1</jaxb-api.version>
+    <jaxb-impl.version>2.3.2</jaxb-impl.version>
+    <jaxb-core.version>2.3.0.1</jaxb-core.version>
+    <!--JavaBeans Activation Framework (JAF)。一般用于统一不同数据格式的处理。常用于 JavaMail 中-->
+    <activation.version>1.1.1</activation.version>
     <!--文件的编码格式-->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -255,12 +281,12 @@
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz</artifactId>
-      <version>2.3.1</version>
+      <version>${quartz.version}</version>
     </dependency>
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz-jobs</artifactId>
-      <version>2.3.1</version>
+      <version>${quartz.version}</version>
     </dependency>
     <!--配置jdk9-->
     <dependency>
@@ -274,6 +300,7 @@
       <version>2.3.29</version>
     </dependency>
     <!--数据验证依赖-->
+    <!-- use hibernate-validator to validate entity before enter controller -->
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
@@ -334,6 +361,93 @@
       <artifactId>solr-solrj</artifactId>
       <version>${solr-solrj.version}</version>
     </dependency>
+    <!-- fastDFS -->
+    <dependency>
+      <groupId>in.clouthink.repack</groupId>
+      <artifactId>fastdfs-client-java</artifactId>
+      <version>1.29.4</version>
+    </dependency>
+    <dependency>
+      <groupId>net.oschina.zcx7878</groupId>
+      <artifactId>fastdfs-client-java</artifactId>
+      <version>1.27.0.0</version>
+    </dependency>
+    <!-- spring rabbitmq -->
+    <dependency>
+      <groupId>org.springframework.amqp</groupId>
+      <artifactId>spring-rabbit</artifactId>
+      <version>${spring-rabbit.version}</version>
+    </dependency>
+<!--guava-->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+    <!--MockWebServer-->
+    <!--A scriptable web server for testing HTTP clients-->
+    <dependency>
+      <groupId>com.squareup.okhttp</groupId>
+      <artifactId>mockwebserver</artifactId>
+      <version>${mockwebserver.version}</version>
+    </dependency>
+    <!-- shiro -->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-all</artifactId>
+      <version>${shiro-all.version}</version>
+    </dependency>
+    <!--javax.mail-->
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>${javax.mail.version}</version>
+    </dependency>
+    <!--Microsoft Office（Excel、WORD、PowerPoint、Visio等）格式档案读和写的功能包-->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+<!--xmlpull解析器-->
+    <dependency>
+      <groupId>xmlpull</groupId>
+      <artifactId>xmlpull</artifactId>
+      <version>${xmlpull.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>xpp3</groupId>
+      <artifactId>xpp3</artifactId>
+      <version>${xpp3.version}</version>
+    </dependency>
+    <!--xstream 可以轻易的将Java对象和xml文档相互转换-->
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>${xstream.version}</version>
+    </dependency>
+    <!--jaxb是Java Architecture for XML Binding的缩写。可以将一个Java对象转变成为XML格式，反之亦然-->
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>${jaxb-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>${jaxb-impl.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-core</artifactId>
+      <version>${jaxb-core.version}</version>
+    </dependency>
+    <!--JavaBeans Activation Framework (JAF)。一般用于统一不同数据格式的处理。常用于 JavaMail 中-->
+    <dependency>
+      <groupId>javax.activation</groupId>
+      <artifactId>activation</artifactId>
+      <version>${activation.version}</version>
+    </dependency>
   </dependencies>
 
   <licenses>
@@ -348,6 +462,13 @@
     <connection></connection>
     <developerConnection></developerConnection>
   </scm>
+  <developers>
+    <developer>
+      <name>wxpay</name>
+      <email></email>
+      <url>https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=11_1</url>
+    </developer>
+  </developers>
   <build>
     <finalName>eat</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

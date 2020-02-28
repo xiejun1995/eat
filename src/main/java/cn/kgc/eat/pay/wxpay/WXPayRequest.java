@@ -15,7 +15,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
 import org.apache.http.util.EntityUtils;
-
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import java.io.InputStream;
@@ -24,14 +23,11 @@ import java.net.UnknownHostException;
 import java.security.KeyStore;
 import java.security.SecureRandom;
 
-import cn.kgc.eat.pay.wxpay.WXPayConstants.SignType;
-
 import static cn.kgc.eat.pay.wxpay.WXPayConstants.USER_AGENT;
 
 public class WXPayRequest {
     private WXPayConfig config;
     public WXPayRequest(WXPayConfig config) throws Exception{
-
         this.config = config;
     }
 

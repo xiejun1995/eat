@@ -147,4 +147,67 @@
       COMMENT_DATE = #{commentDate,jdbcType=TIMESTAMP}
     where COMMENT_ID = #{commentId,jdbcType=BIGINT}
   </update>
+  <!--
+    后台查询评论详情
+    @姚天祥 set 2020-02-28 09:00
+  -->
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT * FROM eat_comment
+  </select>
+
+  <!--
+    增加评论
+    @姚天祥 set 2020-02-28 9:00
+  -->
+  <insert id="addComment">
+    INSERT INTO eat_comment SET
+    COMMENT_AUTHOR = #{commentAuthor},
+    COMMENT_CONTENT = #{commentContent},
+    COMMENT_DATE = NOW(),
+    COMMENT_MERCHANT_ID = #{commentMerchantId}
+  </insert>
+
+  <!--
+    后台根据ID查询评论
+    @姚天祥 set 2020-02-28 10:00
+  -->
+  <select id="findComById" resultMap="BaseResultMap">
+    SELECT * FROM eat_comment WHERE COMMENT_ID = #{commentId}
+  </select>
+
+  <!--
+    修改评论
+    @姚天祥 set 2020-02-28 10:00
+  -->
+  <update id="updateComment">
+    UPDATE eat_comment SET COMMENT_AUTHOR = #{commentAuthor},
+    COMMENT_CONTENT = #{commentContent},
+    COMMENT_MERCHANT_ID = #{commentMerchantId}
+    WHERE COMMENT_ID = #{commentId}
+  </update>
+
+  <!--
+    根据ID删除评论信息
+    @姚天祥 set 2020-02-28 11:00
+  -->
+  <delete id="deleteById">
+    DELETE FROM eat_comment WHERE COMMENT_ID = #{commentId}
+  </delete>
+
+  <select id="commentList" resultMap="BaseResultMap">
+        SELECT c.*,u.USER_NAME FROM eat_comment AS c,eat_user AS u
+     WHERE c.COMMENT_AUTHOR=u.USER_ID AND COMMENT_MERCHANT_ID=#{commentMerchantId}
+  </select>
+
+  <select id="commentAuthorByName" resultType="integer">
+    select USER_ID from eat_user where USER_NAME=#{userName}
+  </select>
+
+  <delete id="deleteComment" parameterType="integer">
+        delete  from eat_comment where COMMENT_ID=#{id}
+  </delete>
+
+  <select id="selectEatCommentById" resultType="integer">
+        SELECT `COMMENT_MERCHANT_ID` FROM eat_comment WHERE `COMMENT_ID`=#{id}
+  </select>
 </mapper>

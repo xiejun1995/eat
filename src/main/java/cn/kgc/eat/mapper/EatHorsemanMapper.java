@@ -1,6 +1,9 @@
 package cn.kgc.eat.mapper;
 
 import cn.kgc.eat.pojo.EatHorseman;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface EatHorsemanMapper {
     /**
@@ -49,5 +52,29 @@ public interface EatHorsemanMapper {
      *
      * @mbggenerated Sat Feb 22 14:23:02 CST 2020
      */
-    int updateByPrimaryKey(EatHorseman record);
+    int updateByPrimaryKey(@Param("horsemanPhone") String horsemanPhone);
+
+    /**
+     * 后台增加骑手接口
+     * @姚天祥 set 2020-02-22 23:00:00
+     */
+    int addHoresman(EatHorseman horseman);
+
+    /**
+     * 后台根据姓名或电话分页查询骑手接口
+     * @姚天祥 set 2020-02-23 08:30
+     */
+    List<EatHorseman> selectHoresmanByNameOrPhone(EatHorseman eatHorseman);
+
+    /**
+     * 进入后台显示骑手列表接口
+     * @姚天祥 set 2020-02-23 08:40
+     */
+    List<EatHorseman> selectHoresmanAll();
+
+    /**
+     * 后台根据骑手电话修改骑手信息
+     * @姚天祥 set 2020-02-23 16:30
+     */
+    int updateByPhone(EatHorseman eatHorseman);
 }

@@ -155,4 +155,79 @@
       ORDER_NUMBER = #{orderNumber,jdbcType=BIGINT}
     where ORDER_ID = #{orderId,jdbcType=VARCHAR}
   </update>
+  <!--
+    前台骑手查询未配送的订单
+    @姚天祥 set 2020-02-25 11:30
+  -->
+  <select id="findUnOrder" resultMap="BaseResultMap">
+    SELECT o.ORDER_STATUS_ID,o.ORDER_ID,m.MERCHANT_NAME,m.MERCHANT_PHONE,m.MERCHANT_ADDRESS,o.ORDER_TIME,
+    o.ORDER_DELIVERY_TIME,u.USER_NAME,u.USER_PHONE,u.USER_ADDRESS
+    FROM eat_order AS o,eat_merchant AS m,eat_user AS u
+    WHERE o.ORDER_MERCHANT_ID = m.MERCHANT_ID
+    AND o.ORDER_PHONE = u.USER_PHONE
+    AND ORDER_STATUS_ID != 3
+  </select>
+
+  <!--
+    前台商家根据商家名称查询未完成订单
+    @姚天祥 set 2020-02-27 14:00
+  -->
+  <select id="selectAllByName" resultMap="BaseResultMap">
+    SELECT * FROM eat_order AS o,eat_merchant AS m WHERE o.ORDER_MERCHANT_ID = m.MERCHANT_ID
+    AND MERCHANT_NAME = #{merchantName}
+    AND ORDER_STATUS_ID != 3
+  </select>
+
+  <!--
+    前台骑手接受订单
+    @姚天祥 set 2020-02-28 14:00
+  -->
+  <update id="doOrder">
+    UPDATE eat_order SET ORDER_STATUS_ID = 2, ORDER_DELIVERY_TIME =NOW() WHERE ORDER_ID = #{orderId}
+  </update>
+
+  <!--
+    前台骑手完成配送任务
+    @姚天祥 set 2020-02-28 14:30
+  -->
+  <update id="overOrder">
+    UPDATE eat_order SET ORDER_STATUS_ID = 3 WHERE ORDER_ID = #{orderId}
+  </update>
+
+  <select id="MyOrderList" resultMap="BaseResultMap">
+  SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,`ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+AND ORDER_PEOPLE=#{name}
+  </select>
+
+  <delete id="deleteOrderById">
+    delete from eat_order where ORDER_ID=#{id}
+  </delete>
+
+  <select id="selectOrderById" resultType="string">
+    select ORDER_PEOPLE from eat_order where ORDER_ID=#{id}
+  </select>
+
+  <select id="orderList" resultMap="BaseResultMap">
+      SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,`ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+  </select>
+
+  <delete id="deleteOrder">
+        delete from eat_order  where ORDER_ID=#{id}
+  </delete>
+
+
+  <select id="orderListByAll" resultMap="BaseResultMap">
+    SELECT `ORDER_ID`,`ORDER_PEOPLE`,`ORDER_PHONE`,`ORDER_TIME`,
+    `ORDER_DELIVERY_TIME`,s.`STATUS_NAME`,m.`MERCHANT_NAME`
+FROM eat_order AS o,eat_merchant AS m,eat_status AS s
+WHERE o.`ORDER_STATUS_ID`=s.`STATUS_ID` AND o.`ORDER_MERCHANT_ID`=m.`MERCHANT_ID`
+AND (ORDER_ID=#{text}  OR ORDER_PEOPLE=#{text} OR ORDER_PHONE=#{text}
+OR ORDER_TIME LIKE CONCAT('%',#{text},'%')
+OR ORDER_DELIVERY_TIME LIKE CONCAT('%',#{text},'%') OR s.STATUS_NAME=#{text}
+OR m.MERCHANT_NAME LIKE CONCAT('%',#{text},'%'))
+  </select>
 </mapper>

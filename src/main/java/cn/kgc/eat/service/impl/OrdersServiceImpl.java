@@ -1,17 +1,18 @@
 package cn.kgc.eat.service.impl;
 
-import cn.kgc.eat.idworker.Sid;
+import cn.kgc.eat.id.worker.others.Sid;
 import cn.kgc.eat.mapper.FlowMapper;
 import cn.kgc.eat.mapper.OrdersMapper;
 import cn.kgc.eat.pojo.Flow;
 import cn.kgc.eat.pojo.Orders;
 import cn.kgc.eat.service.OrdersService;
 import cn.kgc.eat.utils.pay.OrderStatusEnum;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+
+import static javax.annotation.Resource.AuthenticationType.CONTAINER;
 
 @Service
 public class OrdersServiceImpl implements OrdersService {
@@ -21,8 +22,8 @@ public class OrdersServiceImpl implements OrdersService {
 
 	@Resource
 	private FlowMapper flowMapper;
-	
-	@Resource
+
+	@Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class)
 	private Sid sid;
 	
 	@Override
