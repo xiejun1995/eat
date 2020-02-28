@@ -130,7 +130,7 @@
                     <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> 菜品管理</span></a></li>
                     <li><a class="ajax-link" href="${pageContext.request.contextPath}/horseman/selectHoresmanAll"><i class="icon-font"></i><span id="qishou" class="hidden-tablet"> 骑手管理</span></a></li>
                     <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 订单管理</span></a></li>
-                    <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 评论管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/comment/selectAll"><i class="icon-picture"></i><span class="hidden-tablet"> 评论管理</span></a></li>
                 </ul>
                 <label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
             </div><!--/.well -->

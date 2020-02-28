@@ -53,6 +53,8 @@
                 <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+                <li><a href="${pageContext.request.contextPath}/order/findUnOrder"><i class="fa fa-map-marker"></i> 骑手入口</a></li>
+                <li><a href="${pageContext.request.contextPath}/greens/selectAll?greensName="><i class="fa fa-map-marker"></i> 商家入口</a></li>
             </ul>
             <ul class="header-links pull-right">
                 <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>

@@ -20,7 +20,6 @@ public class EatMerchantController{
     private Logger logger=Logger.getLogger(EatMerchantController.class);
     @Resource
     private EatMerchantService EatMerchantService;
-
     /**
      *转向商家管理主页
      * @姚天祥 set 2020-02-24 08:30

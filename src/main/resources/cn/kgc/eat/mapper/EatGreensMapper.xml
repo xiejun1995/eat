@@ -151,8 +151,50 @@
     添加菜品信息
     @姚天祥 set 2020-02-26 09:00
   -->
-  <insert id="addGreens">
-    INSERT INTO eat_greens (GREENS_NAME,GREENS_PRICE,GREENS_ADDRESS,GREENS_GRADE_ID,GREENS_TYPE_ID,GREENS_MERCHANT_ID,GREENS_PIC,GREENS_DETAILS)
-        VALUES (#{greensName},#{greensPrice},#{greensAddress},0,#{greensTypeId},0,#{greensPic},#{greensDetails})
+  <insert id="addGreens" parameterType="cn.kgc.eat.pojo.EatGreens">
+    INSERT INTO eat_greens (GREENS_NAME,GREENS_PRICE,GREENS_ADDRESS,GREENS_GRADE_ID,GREENS_TYPE_ID,MERCHANT_SECURITY_ID,GREENS_PIC,GREENS_DETAILS)
+        VALUES (#{greensName},#{greensPrice},#{greensAddress},0,#{greensTypeId},#{greensSecurityId},#{greensPic},#{greensDetails})
   </insert>
+  
+  <!--
+    删除菜品信息
+    @姚天祥 set 2020-02-27 09;00
+  -->
+  <delete id="deleteById">
+    DELETE FROM eat_greens WHERE GREENS_ID = #{greensId}
+  </delete>
+
+  <!--
+    查询所有菜品
+    @姚天祥 set 2020-02-27 10:00
+  -->
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT * FROM eat_greens AS g,eat_merchant AS m
+    WHERE g.MERCHANT_SECURITY_ID = m.MERCHANT_ID
+    AND MERCHANT_NAME = #{greensName}
+  </select>
+
+  <!--
+    根据ID查询菜品详情
+    @姚天祥 set 2020-02-27 14:00
+  -->
+  <select id="findGreensById" resultMap="BaseResultMap">
+    SELECT * FROM eat_greens WHERE GREENS_ID = #{greensId}
+  </select>
+
+  <!--
+    根据ID修改菜品详情
+    @姚天祥 set 2020-02-27 14:00
+  -->
+  <update id="updateGreensById" parameterType="cn.kgc.eat.pojo.EatGreens">
+    UPDATE eat_greens SET
+    GREENS_NAME = #{greensName},
+    GREENS_PRICE = #{greensPrice},
+    GREENS_ADDRESS = #{greensAddress},
+    GREENS_TYPE_ID = #{greensTypeId},
+    MERCHANT_SECURITY_ID = #{greensSecurityId},
+    GREENS_PIC = #{greensPic},
+    GREENS_DETAILS = #{greensDetails}
+    WHERE GREENS_ID = #{greensId}
+  </update>
 </mapper>

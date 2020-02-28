@@ -74,7 +74,8 @@
 				<div class="row-fluid sortable">
 					<div class="box span12">
 						<div class="box-header well" data-original-title>
-							<h2><i class="icon-user"></i> 商家管理</h2>
+							<h2><i class="icon-user"></i> 评论管理</h2>
+							&nbsp;&nbsp;<a class="ajax-link btn btn-primary" href="${pageContext.request.contextPath}/comment/toadd"><i class="icon-font"></i>添加评论</a>
 							<div class="box-icon">
 								<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
 								<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -85,39 +86,32 @@
 							<table class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 								<tr>
+									<th>评论人</th>
+									<th>评论内容</th>
+									<th>评论时间</th>
 									<th>商家ID</th>
-									<th>商家名称</th>
-									<th>商家电子邮箱</th>
-									<th>商家联系电话</th>
-									<th>商家营业状态</th>
-									<th>商家地址</th>
-									<th>商家食品安全档案ID</th>
 									<th>操作</th>
 								</tr>
 								</thead>
 								<tbody>
-								<c:forEach items="${eatMerchantList}" var="eatMerchant">
+								<c:forEach items="${eatCommentList}" var="commentList">
 									<tr>
-										<td class="center">${eatMerchant.merchantId}</td>
-										<td class="center">${eatMerchant.merchantName}</td>
-										<td class="center">${eatMerchant.merchantEmail}</td>
-										<td class="center">${eatMerchant.merchantPhone}</td>
-										<td class="center">${eatMerchant.merchantStatus}</td>
-										<td class="center">${eatMerchant.merchantAddress}</td>
-										<td class="center">${eatMerchant.merchantSecurityId}</td>
+										<td class="center">${commentList.commentAuthor}</td>
+										<td class="center">${commentList.commentContent}</td>
+										<td class="center"><fm:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${commentList.commentDate}"/></td>
+										<td class="center">${commentList.commentId}</td>
 										<td class="center">
-											<a class="btn btn-info" href="${pageContext.request.contextPath}/merchant/findMetByid?merchantId=${eatMerchant.merchantId}">
+											<a class="btn btn-info" href="${pageContext.request.contextPath}/comment/findComById?commentId=${commentList.commentId}">
 												<i class="icon-edit icon-white"></i>
-												Edit
+												修改
 											</a>
-<%--											<a class="btn btn-danger" href="${pageContext.request.contextPath}/merchant/?merchantId=${eatMerchant.merchantId}">--%>
-<%--												<i class="icon-trash icon-white"></i>--%>
-<%--												Delete--%>
-<%--											</a>--%>
+											<a class="btn btn-danger" onclick="return horsemandelete()" href="${pageContext.request.contextPath}/comment/deleteById?commentId=${commentList.commentId}">
+												<i class="icon-trash icon-white"></i>
+												删除
+											</a>
 										</td>
 									</tr>
 								</c:forEach>
-
 <%--								<tr>--%>
 <%--									<td class="center"></td>--%>
 <%--									<td class="center"></td>--%>
@@ -239,6 +233,7 @@
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath}/statics/plugin/BootStrap/js/charisma.js"></script>
+
 	<script>
 		function horsemandelete() {
 			var msg = "您真的确定要删除吗？\n\n请确认！";
@@ -249,6 +244,23 @@
 			}
 		}
 
+		$(function () {
+			$.getJSON("${pageContext.request.contextPath}/horseman/selectHoresmanAll",function (result) {
+				var $url = $("tbody");
+				var td = "";
+				// var $result = result.result;
+				$(result).each(function (i) {
+					var horsemanName = result[i].horsemanName;
+					var horsemanPassword = result[i].horsemanPassword;
+					var horsemanBornDate = result[i].horsemanBornDate;
+					var horsemanPhone = result[i].horsemanPhone;
+					var horsemanAddress = result[i].horsemanAddress;
+					td += "<tr><td>"+horsemanName+"</td><td>"+horsemanPassword+"</td><td>"+horsemanBornDate+"</td><td>"+horsemanPhone+"</td><td>"+horsemanAddress+"</td>" +
+							"<td><a class=\"btn btn-info\" href=\"${pageContext.request.contextPath}/horseman/selectByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-edit icon-white\"></i>Edit</a>&nbsp;&nbsp;<a class=\"btn btn-danger\" href=\"${pageContext.request.contextPath}/horseman/deleteByPrimaryKey?horsemanPhone="+horsemanPhone+"\"><i class=\"icon-trash icon-white\"></i>Delete</a></td></tr>";
+				});
+				$url.html(td);
+			});
+		});
 	</script>
 
 	</body>
