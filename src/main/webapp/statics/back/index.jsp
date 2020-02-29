@@ -66,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html"> CRM</a>
+            <a class="brand" href="index.jsp">后台管理页面</a>
 
             <!-- theme selector starts -->
             <div class="btn-group pull-right theme-container" >
@@ -124,12 +124,13 @@
             <div class="well nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
                     <li class="nav-header hidden-tablet">主菜单</li>
-                    <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> 用户管理</span></a></li>
-                    <li><a class="ajax-link" href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> 菜系管理</span></a></li>
+                    <li class="nav-header hidden-tablet">主菜单</li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/user/getUserList"><i class="icon-home"></i><span class="hidden-tablet"> 用户管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}"><i class="icon-eye-open"></i><span class="hidden-tablet"> 菜系管理</span></a></li>
                     <li><a class="ajax-link" href="${pageContext.request.contextPath}/merchant/selectAll"><i class="icon-edit"></i><span class="hidden-tablet"> 商家管理</span></a></li>
-                    <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> 菜品管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/getGreensList"><i class="icon-list-alt"></i><span class="hidden-tablet"> 菜品管理</span></a></li>
                     <li><a class="ajax-link" href="${pageContext.request.contextPath}/horseman/selectHoresmanAll"><i class="icon-font"></i><span id="qishou" class="hidden-tablet"> 骑手管理</span></a></li>
-                    <li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> 订单管理</span></a></li>
+                    <li><a class="ajax-link" href="${pageContext.request.contextPath}/order/orderList"><i class="icon-picture"></i><span class="hidden-tablet"> 订单管理</span></a><>
                     <li><a class="ajax-link" href="${pageContext.request.contextPath}/comment/selectAll"><i class="icon-picture"></i><span class="hidden-tablet"> 评论管理</span></a></li>
                 </ul>
                 <label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
@@ -151,10 +152,10 @@
             <div>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Home</a> <span class="divider">/</span>
+                        <a href="#">后台管理页面</a> <span class="divider">/</span>
                     </li>
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="#">首页</a>
                     </li>
                 </ul>
             </div>

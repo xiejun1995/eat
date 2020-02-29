@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<input type="text" id="qrCodeUrl" value="${qrCodeUrl }"/>
+	<input type="text" id="qrCodeUrl" value="${qrCodeUrl}"/>
 	
 	<div id="code"></div> 
 	
@@ -47,7 +47,7 @@
 // 				debugger;
 				console.log(data);
 				if (data) {
-					window.location.href = "/wxpay/paySuccess.action";
+					window.location.href = "${pageContext.request.contextPath}/wxpay/paySuccess.action";
 				}
 			});
 		}

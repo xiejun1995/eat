@@ -188,6 +188,6 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="${pageContext.request.contextPath}/statics/scripts/alipay.js" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/alipay.js" />
 
 </html>

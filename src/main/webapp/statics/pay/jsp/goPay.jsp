@@ -11,7 +11,7 @@
     
     <body>
         
-    <form id="payForm" action="${pageContext.request.contextPath}/alipay/goAlipay.action" method="post">
+    <form id="payForm" action="${pageContext.request.contextPath}/statics/front/alipay.jsp" method="post">
     	<input type="hidden" name="orderId" value="${order.id }" />
         <table>
         	<tr>
@@ -35,8 +35,9 @@
         	</tr>
         	</tr>
         		<td>
+					<a href="${pageContext.request.contextPath}/statics/front/alipay.jsp"><img src="${pageContext.request.contextPath}/statics/img/alipay.jpg" style="width: 50px;height: 50px"></a>
         			<input type="submit" value="前往支付宝进行支付">
-        			
+					<a href="${pageContext.request.contextPath}/wxpay/createPreOrder?greensId=1&totalCount=2940" ><img src="${pageContext.request.contextPath}/statics/img/wx.jpg" style="width: 50px;height: 50px"></a>
         			<input type="button" value="微信扫码支付" onclick="wxpayDisplay()">
         		</td>
         	</tr>
@@ -57,7 +58,7 @@
 		
 		var hdnContextPath = $("#hdnContextPath").val();
 		
-		$("#payForm").attr("action", hdnContextPath + "/wxpay/createPreOrder.action");
+		$("#payForm").attr("action", hdnContextPath + "/wxpay/createPreOrder.action?greensId=1&totalCount=2940");
 		$("#payForm").submit();
 	}
 

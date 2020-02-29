@@ -87,7 +87,7 @@ public class AlipayController {
 
 	/**
 	 *
-	 * @param productId
+	 * @param order
 	 * @return
 	 * @throws Exception
 	 */

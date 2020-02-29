@@ -13,7 +13,7 @@
 <body>
 <div style="margin-left: 500px;margin-top:50px;border: #317eac solid 1px;width: 320px;height: 500px;padding-left: 100px">
     <h2>添加用户信息</h2>
-    <form method="get" action="/eat_war_exploded/user/addUser">
+    <form method="get" action="${pageContext.request.contextPath}/user/addUser">
         用户姓名：<br/>
         &nbsp;&nbsp;<input type="text" name="userName" required title="用户姓名不能为空"  placeholder="请输入用户姓名"/><br/>
         用户密码：<br/>

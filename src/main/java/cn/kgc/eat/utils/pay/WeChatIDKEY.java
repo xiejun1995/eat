@@ -14,8 +14,8 @@ package cn.kgc.eat.utils.pay;
  */
 public class WeChatIDKEY {
 	
-	public static final String APPID = "";					// 公众账号ID
-	public static final String MCH_ID = "";							// 商户号
-	public static final String KEY = "";		// 商户密钥
+	public static final String APPID = "wxab8acb865bb1637e";					// 公众账号ID
+	public static final String MCH_ID = "11473623";							// 商户号
+	public static final String KEY = "2ab9071b06b9f739b950ddb41db2690d";		// 商户密钥
 	
 }

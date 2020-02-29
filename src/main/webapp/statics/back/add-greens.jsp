@@ -15,7 +15,7 @@
 <body>
 <div style="margin-left: 500px;margin-top:50px;border: #317eac solid 1px;width: 320px;height: 560px;padding-left: 100px">
     <h2>添加菜品信息</h2>
-    <form method="post" action="/eat_war_exploded/addGreens" enctype="multipart/form-data">
+    <form method="post" action="${pageContext.request.contextPath}/addGreens" enctype="multipart/form-data">
         菜品名字：<br>
         &nbsp;&nbsp;<input type="text" name="greensName" required="required" placeholder="请输入菜品名称"/><br/>
         菜品价格：<br>

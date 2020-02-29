@@ -1,14 +1,17 @@
 package cn.kgc.eat.controller;
 
 import cn.kgc.eat.id.worker.others.Sid;
+import cn.kgc.eat.pojo.EatGreens;
 import cn.kgc.eat.pojo.Orders;
 import cn.kgc.eat.pojo.Product;
+import cn.kgc.eat.service.EatGreensService;
 import cn.kgc.eat.service.OrdersService;
 import cn.kgc.eat.service.ProductService;
 import cn.kgc.eat.utils.pay.wx.service.WxOrderService;
 import cn.kgc.eat.utils.pay.wx.entity.PreOrderResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -22,7 +25,7 @@ import java.io.PrintWriter;
 public class WxpayController {
 
 	@Resource
-	private ProductService productService;
+	private EatGreensService eatGreensService;
 
 	@Resource
 	private OrdersService orderService;
@@ -36,7 +39,7 @@ public class WxpayController {
 	@RequestMapping(value = "/index")
 	public String products() throws Exception {
 		
-		return "index";
+		return "front/index";
 	}
 	
 	// TODO 实际情况需要自己业务订单的状态，此处仅仅用于测试
@@ -54,28 +57,29 @@ public class WxpayController {
 	 * @date 2017年8月31日 下午4:02:01
 	 */
 	@RequestMapping(value = "/createPreOrder")
-	public ModelAndView createPreOrder(String orderId, HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		Orders order = orderService.getOrderById(orderId);
-		
-		Product p = productService.getProductById(order.getProductId());
-		
+	public ModelAndView createPreOrder(@RequestParam("greensId") String greensId, @RequestParam("totalCount") String totalCount,HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		if(greensId!=null){
+			Long id=Long.valueOf(greensId);
+			EatGreens greens=eatGreensService.findGreensById(greensId);
+			// 商品描述
+			String body = greens.getGreensName();
+			// 商户订单号
+			String out_trade_no = sid.nextShort();
+			// 订单总金额，单位为分
+			String total_fee = "1"/*Integer.valueOf(totalCount)*100*/;
+			// 统一下单
+			PreOrderResult preOrderResult = wxOrderService.placeOrder(body, out_trade_no, total_fee);
+
+			ModelAndView mv = new ModelAndView("pay/jsp/payQrCode");
+			mv.addObject("qrCodeUrl", preOrderResult.getCode_url());
+			return mv;
+		}
 //		ModelAndView mv = new ModelAndView("goPay");
 //		mv.addObject("order", order);
 //		mv.addObject("p", p);
 		
-		// 商品描述
-		String body = p.getName();
-		// 商户订单号
-		String out_trade_no = sid.nextShort();
-		// 订单总金额，单位为分
-		String total_fee = "2";
-		// 统一下单
-		PreOrderResult preOrderResult = wxOrderService.placeOrder(body, out_trade_no, total_fee);
-		
-		ModelAndView mv = new ModelAndView("payQrCode");
-		mv.addObject("qrCodeUrl", preOrderResult.getCode_url());
-		return mv;
+		return new ModelAndView("front/index");
 	}
 	
 	/**

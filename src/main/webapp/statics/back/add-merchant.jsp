@@ -13,7 +13,7 @@
 <body>
 <div style="margin-left: 500px;margin-top:50px;border: #317eac solid 1px;width: 320px;height: 500px;padding-left: 100px">
     <h2>添加商家信息</h2>
-    <form method="get" action="/eat_war_exploded/addMerchant">
+    <form method="get" action="${pageContext.request.contextPath}/addMerchant">
         商家电话：<br>
         &nbsp;&nbsp;<input name="merchantPhone" required title="" placeholder="请输入电话号码"/><br/>
         商家地址：<br>

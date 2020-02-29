@@ -117,7 +117,7 @@ public class EatHorsemanController{
         int i = this.EatHorsemanService.deleteByPrimaryKey(horsemanPhone);
         if (i>0) {
             System.out.println("删除成功");
-            return "back/selectHoresmanAll";
+            return "back/horsemanselect";
         }else {
             throw new RuntimeException("删除失败");
         }

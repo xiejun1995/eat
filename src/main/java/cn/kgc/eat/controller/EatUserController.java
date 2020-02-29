@@ -43,8 +43,32 @@ public class EatUserController{
      * @return
      */
     @RequestMapping("/doLogin")
-    public String doLogin(@RequestParam("username") String username,@RequestParam("password") String password){
-        return "back/index";
+    public String doLogin(@RequestParam("username") String username,@RequestParam("password") String password,HttpSession session,HttpServletRequest request){
+        if(username!="" && password!=""){
+            EatUser eatUser=eatUserService.getEatUserByUserName(username);
+            if(eatUser!=null){
+                if(eatUser.getUserPassword().equals(password)){
+                    if(eatUser.getUserRole()==1){
+                        session.setAttribute("eatUser",eatUser);
+                        return "back/index";
+                    }else{
+                        request.setAttribute("msg", Constant.USER_INSUFFICIENT_AUTHORITY);
+                        return "back/login";
+                    }
+
+                }else{
+                    request.setAttribute("msg", Constant.USER_PWD_ERROR);
+                    return "back/login";
+                }
+            }else{
+                request.setAttribute("msg", Constant.USER_NAME_ERROR);
+                return "back/login";
+            }
+            }else {
+                request.setAttribute("msg", Constant.USER_NAME_EMPTY);
+                return "back/login";
+            }
+
     }
 
     /**
@@ -56,15 +80,8 @@ public class EatUserController{
     @RequestMapping("/front/doLogin")
     public String frontDoLogin(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session, HttpServletRequest request) throws ParseException {
         if(username!="" && password!=""){
-            EatUser eatUser=new EatUser();
-            eatUser.setUserName("张三");
-            eatUser.setUserPassword("123456");
-            eatUser.setUserBornDate(new SimpleDateFormat("yyyy-MM-dd").parse("2020-02-22"));
-            eatUser.setUserAddress("兰州安宁");
-            eatUser.setUserAddressId(1);
-            eatUser.setUserPhone("17777777777");
-            eatUser.setUserRole(1);
-            if(eatUser.getUserName().equals(username)){
+            EatUser eatUser=eatUserService.getEatUserByUserName(username);
+            if(eatUser!=null){
                 if(eatUser.getUserPassword().equals(password)){
                     session.setAttribute("eatUser",eatUser);
                     return "front/index";
@@ -76,7 +93,7 @@ public class EatUserController{
                 request.setAttribute("msg", Constant.USER_NAME_ERROR);
                 return "front/login";
             }
-        }else{
+        }else {
             request.setAttribute("msg", Constant.USER_NAME_EMPTY);
             return "front/login";
         }
@@ -224,7 +241,7 @@ public class EatUserController{
             if (list!=null){
                 model.addAttribute("list",list);
                 System.out.println("根据地址查询用户成功");
-                return "front/merchant";
+                return "front/index";
             }else{
                 System.out.println("根据地址查询用户失败");
             }
