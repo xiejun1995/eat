@@ -21,7 +21,7 @@
     <!--Spring面向切面编程中切入点表达式所需jar包-->
     <aspectjweaver.version>1.6.8</aspectjweaver.version>
     <!--单元测试配置-->
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>2.13.0</log4j.version>
