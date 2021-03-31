@@ -62,7 +62,7 @@
     <!-- spring rabbitmq AMQP（Advanced Message Queuing Protocol） 高级消息队列 -->
     <spring-rabbit.version>2.2.4.RELEASE</spring-rabbit.version>
     <!--guava-->
-    <guava.version>28.2-jre</guava.version>
+    <guava.version>29.0-jre</guava.version>
     <!--MockWebServer-->
     <!--A scriptable web server for testing HTTP clients-->
     <mockwebserver.version>2.7.5</mockwebserver.version>
