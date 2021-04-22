@@ -17,7 +17,7 @@
     <!-- spring版本号 -->
     <spring.version>5.2.1.RELEASE</spring.version>
     <!-- mybatis版本号 -->
-    <mybatis.version>3.5.3</mybatis.version>
+    <mybatis.version>3.5.6</mybatis.version>
     <!--Spring面向切面编程中切入点表达式所需jar包-->
     <aspectjweaver.version>1.6.8</aspectjweaver.version>
     <!--单元测试配置-->
