@@ -49,7 +49,7 @@
     <jackson-core.version>2.10.2</jackson-core.version>
     <jackson-annotations.version>2.10.2</jackson-annotations.version>
     <!-- httpclient -->
-    <httpclient.version>4.5.11</httpclient.version>
+    <httpclient.version>4.5.13</httpclient.version>
     <!--mybatis分页插件-->
     <mybatis-paginator.version>1.2.17</mybatis-paginator.version>
     <pagehelper.version>5.1.11</pagehelper.version>
@@ -99,7 +99,7 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.3</version>
+      <version>4.5.13</version>
     </dependency>
     <!-- spring -->
     <dependency>
