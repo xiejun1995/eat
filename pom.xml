@@ -40,7 +40,7 @@
     <!--druid是阿里巴巴开发的Java语言中最好的数据库连接池-->
     <druid.version>1.0.9</druid.version>
     <!--hibernate-validator包版本配置-->
-    <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
+    <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
     <validation-api.version>2.0.1.Final</validation-api.version>
     <!-- 时间操作组件 -->
     <joda-time.version>2.10.5</joda-time.version>
