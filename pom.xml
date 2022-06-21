@@ -34,7 +34,7 @@
     <!--mybatis-spring整合配置-->
     <mybatis-spring.version>2.0.3</mybatis-spring.version>
     <!--数据库版本号-->
-    <mysql.version>8.0.17</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <!--使用jsp内置对象等jsp核心api版本号-->
     <jsp-api.version>2.0</jsp-api.version>
     <!--druid是阿里巴巴开发的Java语言中最好的数据库连接池-->
