@@ -45,7 +45,7 @@
     <!-- 时间操作组件 -->
     <joda-time.version>2.10.5</joda-time.version>
     <!-- Jackson Json处理工具包 -->
-    <jackson-databind.version>2.10.2</jackson-databind.version>
+    <jackson-databind.version>2.12.6.1</jackson-databind.version>
     <jackson-core.version>2.10.2</jackson-core.version>
     <jackson-annotations.version>2.10.2</jackson-annotations.version>
     <!-- httpclient -->
